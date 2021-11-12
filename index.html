@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
+        <link rel="icon" type="image/png" href="legend/2977J_fav.png" />
         
         <style>
         html, body, #map {
@@ -54,7 +55,7 @@
             } else {
               highlightLayer.setStyle({
                 fillColor: '#ffff00',
-                fillOpacity: 1
+                fillOpacity: 0.5
               });
             }
         }
@@ -267,13 +268,25 @@
                         <td colspan="2"><strong>SHEET</strong><br />' + (feature.properties['SHEET'] !== null ? autolinker.link(feature.properties['SHEET'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>TCP</strong><br />' + (feature.properties['TCP'] !== null ? autolinker.link(feature.properties['TCP'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>AS_BUILT</strong><br />' + (feature.properties['AS_BUILT'] !== null ? autolinker.link(feature.properties['AS_BUILT'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>RLVNT</strong><br />' + (feature.properties['RLVNT'] !== null ? autolinker.link(feature.properties['RLVNT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>SPEC</strong><br />' + (feature.properties['SPEC'] !== null ? autolinker.link(feature.properties['SPEC'].toLocaleString()) : '') + '</td>\
@@ -375,16 +388,31 @@
                         <td colspan="2">' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2">' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2">' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2">' + (feature.properties['RLVNT'] !== null ? autolinker.link(feature.properties['RLVNT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['LOCATION'] !== null ? autolinker.link(feature.properties['LOCATION'].toLocaleString()) : '') + '</td>\
@@ -560,28 +588,55 @@
                         <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>PIPE_DIA</strong><br />' + (feature.properties['PIPE_DIA'] !== null ? autolinker.link(feature.properties['PIPE_DIA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>PIPE_MATL</strong><br />' + (feature.properties['PIPE_MATL'] !== null ? autolinker.link(feature.properties['PIPE_MATL'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>MXASSETNUM</strong><br />' + (feature.properties['MXASSETNUM'] !== null ? autolinker.link(feature.properties['MXASSETNUM'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>START_NODE</strong><br />' + (feature.properties['START_NODE'] !== null ? autolinker.link(feature.properties['START_NODE'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>END_NODE</strong><br />' + (feature.properties['END_NODE'] !== null ? autolinker.link(feature.properties['END_NODE'].toLocaleString()) : '') + '</td>\
@@ -726,28 +781,55 @@
                         <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>PIPE_DIA</strong><br />' + (feature.properties['PIPE_DIA'] !== null ? autolinker.link(feature.properties['PIPE_DIA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>PIPE_MATL</strong><br />' + (feature.properties['PIPE_MATL'] !== null ? autolinker.link(feature.properties['PIPE_MATL'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>MXASSETNUM</strong><br />' + (feature.properties['MXASSETNUM'] !== null ? autolinker.link(feature.properties['MXASSETNUM'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>START_NODE</strong><br />' + (feature.properties['START_NODE'] !== null ? autolinker.link(feature.properties['START_NODE'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>END_NODE</strong><br />' + (feature.properties['END_NODE'] !== null ? autolinker.link(feature.properties['END_NODE'].toLocaleString()) : '') + '</td>\
@@ -853,28 +935,55 @@
                         <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>PIPE_DIA</strong><br />' + (feature.properties['PIPE_DIA'] !== null ? autolinker.link(feature.properties['PIPE_DIA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>PIPE_MATL</strong><br />' + (feature.properties['PIPE_MATL'] !== null ? autolinker.link(feature.properties['PIPE_MATL'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>MXASSETNUM</strong><br />' + (feature.properties['MXASSETNUM'] !== null ? autolinker.link(feature.properties['MXASSETNUM'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>BLKLOT</strong><br />' + (feature.properties['BLKLOT'] !== null ? autolinker.link(feature.properties['BLKLOT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>ADDRESS</strong><br />' + (feature.properties['ADDRESS'] !== null ? autolinker.link(feature.properties['ADDRESS'].toLocaleString()) : '') + '</td>\
@@ -967,19 +1076,37 @@
                         <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>MAXIMOID</strong><br />' + (feature.properties['MAXIMOID'] !== null ? autolinker.link(feature.properties['MAXIMOID'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>NODE_ID</strong><br />' + (feature.properties['NODE_ID'] !== null ? autolinker.link(feature.properties['NODE_ID'].toLocaleString()) : '') + '</td>\
@@ -1138,19 +1265,37 @@
                         <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">&nbsp;</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2"><strong>MAXIMOID</strong><br />' + (feature.properties['MAXIMOID'] !== null ? autolinker.link(feature.properties['MAXIMOID'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>NODE_ID</strong><br />' + (feature.properties['NODE_ID'] !== null ? autolinker.link(feature.properties['NODE_ID'].toLocaleString()) : '') + '</td>\
