@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/leaflet-measure.css">
     <link rel="icon" type="image/png" href="legend/2977J_fav.png" />
-
-
     <style>
         html,
         body,
@@ -44,6 +42,7 @@
     <script src="js/leaflet-measure.js"></script>
     <script src="js/proj4.js"></script>
     <script src="js/proj4leaflet.js"></script>
+    <script src="js/layer_filter.js"></script>    
     <script src="js/popup_content_return.js"></script>
     <script src="data/2977J_010_PRJCT_DWGS_18.js"></script>
     <script src="data/2977J_200_flatwork_19.js"></script>
@@ -359,31 +358,31 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>SHEET</strong><br />' + (feature.properties['SHEET'] !== null ? autolinker.link(feature.properties['SHEET'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SHEET</strong><br>' + (feature.properties['SHEET'] !== null ? autolinker.link(feature.properties['SHEET'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>TCP</strong><br />' + (feature.properties['TCP'] !== null ? autolinker.link(feature.properties['TCP'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>TCP</strong><br>' + (feature.properties['TCP'] !== null ? autolinker.link(feature.properties['TCP'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>AS_BUILT</strong><br />' + (feature.properties['AS_BUILT'] !== null ? autolinker.link(feature.properties['AS_BUILT'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>AS_BUILT</strong><br>' + (feature.properties['AS_BUILT'] !== null ? autolinker.link(feature.properties['AS_BUILT'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>RLVNT</strong><br />' + (feature.properties['RLVNT'] !== null ? autolinker.link(feature.properties['RLVNT'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>RLVNT</strong><br>' + (feature.properties['RLVNT'] !== null ? autolinker.link(feature.properties['RLVNT'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SPEC</strong><br />' + (feature.properties['SPEC'] !== null ? autolinker.link(feature.properties['SPEC'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SPEC</strong><br>' + (feature.properties['SPEC'] !== null ? autolinker.link(feature.properties['SPEC'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {
@@ -392,10 +391,10 @@
         }
 
         function style_2977J_010_PRJCT_DWGS_18_0(feature) {
-            switch (String(feature.properties.DOMAIN)) {
-                case 'SW':
+            switch (String(feature.properties.LAYER_TYPE)) {
+                case 'PLAN_BOUNDARY_SW':
                     return {
-                        pane: 'pane_2977J_010_PRJCT_DWGS_18',
+                        pane: 'pane_2977J_010_PRJCT_DWGS_18_SW',
                             opacity: 1,
                             color: 'rgba(35,35,35,1.0)',
                             dashArray: '',
@@ -408,9 +407,9 @@
                             interactive: true,
                     }
                     break;
-                case 'R':
+                case 'PLAN_BOUNDARY_R':
                     return {
-                        pane: 'pane_2977J_010_PRJCT_DWGS_18',
+                        pane: 'pane_2977J_010_PRJCT_DWGS_18_R',
                             opacity: 1,
                             color: 'rgba(35,35,35,1.0)',
                             dashArray: '',
@@ -423,9 +422,10 @@
                             interactive: true,
                     }
                     break;
-                case 'CR':
+                    
+                case 'PLAN_BOUNDARY_CR':
                     return {
-                        pane: 'pane_2977J_010_PRJCT_DWGS_18',
+                        pane: 'pane_2977J_010_PRJCT_DWGS_18_CR',
                             opacity: 1,
                             color: 'rgba(35,35,35,1.0)',
                             dashArray: '',
@@ -434,42 +434,82 @@
                             weight: 1.0,
                             fill: true,
                             fillOpacity: 0.5,
-                            fillColor: 'rgba(88,219,139,0.5)',
+                            fillColor: 'rgba(228, 173, 32, 0.5)',
                             interactive: true,
                     }
                     break;
-                default:
-                    return {
-                        pane: 'pane_2977J_010_PRJCT_DWGS_18',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 0.5,
-                            fillColor: 'rgba(214,56,154,0.5)',
-                            interactive: true,
-                    }
-                    break;
+                    
+                //default:
+                //    return {
+                //        pane: 'pane_2977J_010_PRJCT_DWGS_18',
+                //            opacity: 1,
+                //            color: 'rgba(35,35,35,1.0)',
+                //            dashArray: '',
+                //            lineCap: 'butt',
+                //            lineJoin: 'miter',
+                //            weight: 1.0,
+                //            fill: true,
+                //            fillOpacity: 0.5,
+                //            fillColor: 'rgba(214,56,154,0.5)',
+                //            interactive: true,
+                //    }
+                //    break;
             }
         }
-        map.createPane('pane_2977J_010_PRJCT_DWGS_18');
-        map.getPane('pane_2977J_010_PRJCT_DWGS_18').style.zIndex = 418;
-        map.getPane('pane_2977J_010_PRJCT_DWGS_18').style['mix-blend-mode'] = 'normal';
-        var layer_2977J_010_PRJCT_DWGS_18 = new L.geoJson(json_2977J_010_PRJCT_DWGS_18, {
+        
+        // SW add-layer          
+        
+        map.createPane('pane_2977J_010_PRJCT_DWGS_18_SW');
+        map.getPane('pane_2977J_010_PRJCT_DWGS_18_SW').style.zIndex = 418;
+        map.getPane('pane_2977J_010_PRJCT_DWGS_18_SW').style['mix-blend-mode'] = 'normal';
+        var layer_2977J_010_PRJCT_DWGS_18_SW = new L.geoJson(layer_filter('PLAN_BOUNDARY_SW', json_2977J_010_PRJCT_DWGS_18), {
             attribution: '',
             interactive: true,
-            dataVar: 'json_2977J_010_PRJCT_DWGS_18',
-            layerName: 'layer_2977J_010_PRJCT_DWGS_18',
-            pane: 'pane_2977J_010_PRJCT_DWGS_18',
+            dataVar: 'json_2977J_010_PRJCT_DWGS_18_SW',
+            layerName: 'layer_2977J_010_PRJCT_DWGS_18_SW',
+            pane: 'pane_2977J_010_PRJCT_DWGS_18_SW',
             onEachFeature: pop_2977J_010_PRJCT_DWGS_18,
             style: style_2977J_010_PRJCT_DWGS_18_0,
         });
-
-        bounds_group.addLayer(layer_2977J_010_PRJCT_DWGS_18);
-        map.addLayer(layer_2977J_010_PRJCT_DWGS_18);
+        
+        bounds_group.addLayer(layer_2977J_010_PRJCT_DWGS_18_SW);
+        map.addLayer(layer_2977J_010_PRJCT_DWGS_18_SW);
+        
+        // R add-layer  
+        
+        map.createPane('pane_2977J_010_PRJCT_DWGS_18_R');
+        map.getPane('pane_2977J_010_PRJCT_DWGS_18_R').style.zIndex = 419;
+        map.getPane('pane_2977J_010_PRJCT_DWGS_18_R').style['mix-blend-mode'] = 'normal';
+        var layer_2977J_010_PRJCT_DWGS_18_R = new L.geoJson(layer_filter('PLAN_BOUNDARY_R', json_2977J_010_PRJCT_DWGS_18), {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_2977J_010_PRJCT_DWGS_18_R',
+            layerName: 'layer_2977J_010_PRJCT_DWGS_18_R',
+            pane: 'pane_2977J_010_PRJCT_DWGS_18_R',
+            onEachFeature: pop_2977J_010_PRJCT_DWGS_18,
+            style: style_2977J_010_PRJCT_DWGS_18_0,
+        });
+        
+        bounds_group.addLayer(layer_2977J_010_PRJCT_DWGS_18_R);
+        map.addLayer(layer_2977J_010_PRJCT_DWGS_18_R);
+        
+        // CR add-layer
+        
+        map.createPane('pane_2977J_010_PRJCT_DWGS_18_CR');
+        map.getPane('pane_2977J_010_PRJCT_DWGS_18_CR').style.zIndex = 420;
+        map.getPane('pane_2977J_010_PRJCT_DWGS_18_CR').style['mix-blend-mode'] = 'normal';
+        var layer_2977J_010_PRJCT_DWGS_18_CR = new L.geoJson(layer_filter('PLAN_BOUNDARY_CR', json_2977J_010_PRJCT_DWGS_18), {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_2977J_010_PRJCT_DWGS_18_CR',
+            layerName: 'layer_2977J_010_PRJCT_DWGS_18_CR',
+            pane: 'pane_2977J_010_PRJCT_DWGS_18_CR',
+            onEachFeature: pop_2977J_010_PRJCT_DWGS_18,
+            style: style_2977J_010_PRJCT_DWGS_18_0,
+        });
+        
+        bounds_group.addLayer(layer_2977J_010_PRJCT_DWGS_18_CR);
+        map.addLayer(layer_2977J_010_PRJCT_DWGS_18_CR);
 
         function pop_2977J_200_flatwork_19(feature, layer) {
             layer.on({
@@ -685,61 +725,61 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>INST_ID</strong><br>' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SCOPE</strong><br>' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PIPE_DIA</strong><br />' + (feature.properties['PIPE_DIA'] !== null ? autolinker.link(feature.properties['PIPE_DIA'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PIPE_DIA</strong><br>' + (feature.properties['PIPE_DIA'] !== null ? autolinker.link(feature.properties['PIPE_DIA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PIPE_MATL</strong><br />' + (feature.properties['PIPE_MATL'] !== null ? autolinker.link(feature.properties['PIPE_MATL'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PIPE_MATL</strong><br>' + (feature.properties['PIPE_MATL'] !== null ? autolinker.link(feature.properties['PIPE_MATL'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>STATUS</strong><br>' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PP_HISTORY</strong><br>' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SUBMITTALS</strong><br>' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>MXASSETNUM</strong><br />' + (feature.properties['MXASSETNUM'] !== null ? autolinker.link(feature.properties['MXASSETNUM'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>MXASSETNUM</strong><br>' + (feature.properties['MXASSETNUM'] !== null ? autolinker.link(feature.properties['MXASSETNUM'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>START_NODE</strong><br />' + (feature.properties['START_NODE'] !== null ? autolinker.link(feature.properties['START_NODE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>START_NODE</strong><br>' + (feature.properties['START_NODE'] !== null ? autolinker.link(feature.properties['START_NODE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>END_NODE</strong><br />' + (feature.properties['END_NODE'] !== null ? autolinker.link(feature.properties['END_NODE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>END_NODE</strong><br>' + (feature.properties['END_NODE'] !== null ? autolinker.link(feature.properties['END_NODE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {
@@ -881,61 +921,61 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>INST_ID</strong><br>' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SCOPE</strong><br>' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PIPE_DIA</strong><br />' + (feature.properties['PIPE_DIA'] !== null ? autolinker.link(feature.properties['PIPE_DIA'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PIPE_DIA</strong><br>' + (feature.properties['PIPE_DIA'] !== null ? autolinker.link(feature.properties['PIPE_DIA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PIPE_MATL</strong><br />' + (feature.properties['PIPE_MATL'] !== null ? autolinker.link(feature.properties['PIPE_MATL'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PIPE_MATL</strong><br>' + (feature.properties['PIPE_MATL'] !== null ? autolinker.link(feature.properties['PIPE_MATL'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>STATUS</strong><br>' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PP_HISTORY</strong><br>' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SUBMITTALS</strong><br>' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>MXASSETNUM</strong><br />' + (feature.properties['MXASSETNUM'] !== null ? autolinker.link(feature.properties['MXASSETNUM'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>MXASSETNUM</strong><br>' + (feature.properties['MXASSETNUM'] !== null ? autolinker.link(feature.properties['MXASSETNUM'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>START_NODE</strong><br />' + (feature.properties['START_NODE'] !== null ? autolinker.link(feature.properties['START_NODE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>START_NODE</strong><br>' + (feature.properties['START_NODE'] !== null ? autolinker.link(feature.properties['START_NODE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>END_NODE</strong><br />' + (feature.properties['END_NODE'] !== null ? autolinker.link(feature.properties['END_NODE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>END_NODE</strong><br>' + (feature.properties['END_NODE'] !== null ? autolinker.link(feature.properties['END_NODE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {
@@ -1038,61 +1078,61 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>INST_ID</strong><br>' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SCOPE</strong><br>' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PIPE_DIA</strong><br />' + (feature.properties['PIPE_DIA'] !== null ? autolinker.link(feature.properties['PIPE_DIA'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PIPE_DIA</strong><br>' + (feature.properties['PIPE_DIA'] !== null ? autolinker.link(feature.properties['PIPE_DIA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PIPE_MATL</strong><br />' + (feature.properties['PIPE_MATL'] !== null ? autolinker.link(feature.properties['PIPE_MATL'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PIPE_MATL</strong><br>' + (feature.properties['PIPE_MATL'] !== null ? autolinker.link(feature.properties['PIPE_MATL'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>STATUS</strong><br>' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PP_HISTORY</strong><br>' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SUBMITTALS</strong><br>' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>MXASSETNUM</strong><br />' + (feature.properties['MXASSETNUM'] !== null ? autolinker.link(feature.properties['MXASSETNUM'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>MXASSETNUM</strong><br>' + (feature.properties['MXASSETNUM'] !== null ? autolinker.link(feature.properties['MXASSETNUM'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>BLKLOT</strong><br />' + (feature.properties['BLKLOT'] !== null ? autolinker.link(feature.properties['BLKLOT'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>BLKLOT</strong><br>' + (feature.properties['BLKLOT'] !== null ? autolinker.link(feature.properties['BLKLOT'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>ADDRESS</strong><br />' + (feature.properties['ADDRESS'] !== null ? autolinker.link(feature.properties['ADDRESS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>ADDRESS</strong><br>' + (feature.properties['ADDRESS'] !== null ? autolinker.link(feature.properties['ADDRESS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {
@@ -1182,43 +1222,43 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>INST_ID</strong><br>' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SCOPE</strong><br>' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>STATUS</strong><br>' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PP_HISTORY</strong><br>' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SUBMITTALS</strong><br>' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>MAXIMOID</strong><br />' + (feature.properties['MAXIMOID'] !== null ? autolinker.link(feature.properties['MAXIMOID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>MAXIMOID</strong><br>' + (feature.properties['MAXIMOID'] !== null ? autolinker.link(feature.properties['MAXIMOID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>NODE_ID</strong><br />' + (feature.properties['NODE_ID'] !== null ? autolinker.link(feature.properties['NODE_ID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>NODE_ID</strong><br>' + (feature.properties['NODE_ID'] !== null ? autolinker.link(feature.properties['NODE_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {
@@ -1374,43 +1414,43 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>INST_ID</strong><br />' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>INST_ID</strong><br>' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SCOPE</strong><br />' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SCOPE</strong><br>' + (feature.properties['SCOPE'] !== null ? autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>STATUS</strong><br />' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>STATUS</strong><br>' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>PP_HISTORY</strong><br />' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>PP_HISTORY</strong><br>' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>SUBMITTALS</strong><br />' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SUBMITTALS</strong><br>' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>MAXIMOID</strong><br />' + (feature.properties['MAXIMOID'] !== null ? autolinker.link(feature.properties['MAXIMOID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>MAXIMOID</strong><br>' + (feature.properties['MAXIMOID'] !== null ? autolinker.link(feature.properties['MAXIMOID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">&nbsp;</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>NODE_ID</strong><br />' + (feature.properties['NODE_ID'] !== null ? autolinker.link(feature.properties['NODE_ID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>NODE_ID</strong><br>' + (feature.properties['NODE_ID'] !== null ? autolinker.link(feature.properties['NODE_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {
@@ -1491,14 +1531,17 @@
 
         bounds_group.addLayer(layer_2977J_104_SW_drains_24);
         var baseMaps = {};
+        
         L.control.layers(baseMaps, {
-            '<strong>Plan Boundaries</strong><br /><table><tr><td style="text-align: center;"><img src="legend/2977J_010_PRJCT_DWGS_18_CR0.png" /></td><td>CR</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_010_PRJCT_DWGS_18_R1.png" /></td><td>R</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_010_PRJCT_DWGS_18_SW2.png" /></td><td>SW</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_010_PRJCT_DWGS_18,
-            '<strong>Sewer Mains</strong><br /><table><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_InstallN12VCP1.png" /></td><td>Install (N) 12" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN12VCP2.png" /></td><td>Replace (E) with (N) 12" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN18VCP3.png" /></td><td>Replace (E) with (N) 18" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN21VCP4.png" /></td><td>Replace (E) with (N) 21" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_InstallN24VCP5.png" /></td><td>Install (N) 24" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN24VCP6.png" /></td><td>Replace (E) with (N) 24" VCP</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_101_SW_mains_20,
-            '<strong>Sewer Manholes</strong><br /><table><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_InstallNperSFPWSTDPlan871811.png" /></td><td>Install (N) per SFPW STD Plan 87,181</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_ReplaceEwithNperSFPWSTDPlan871812.png" /></td><td>Replace (E) with (N) per SFPW STD Plan 87,181</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_InstallNperSFPWSTDPlan871823.png" /></td><td>Install (N) per SFPW STD Plan 87,182</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_InstallNAngledperSFPWSTDPlan871824.png" /></td><td>Install (N) Angled per SFPW STD Plan 87,182</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_RemoveE5.png" /></td><td>Remove (E)</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_103_SW_manholes_23,
-            '<strong>Sewer Culverts</strong><br /><table><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_InstallN10VCP1.png" /></td><td>Install (N) 10" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_ReplaceEifDirected2.png" /></td><td>Replace (E) if Directed</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_PlugandFillE3.png" /></td><td>Plug and Fill (E)</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_102_SW_culverts_21,
-            '<strong>Catch Basins</strong><br /><table><tr><td style="text-align: center;"><img src="legend/2977J_104_SW_drains_24_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_104_SW_drains_24_InstallNperSFPWSTDPlan871881.png" /></td><td>Install (N) per SFPW STD Plan 87,188</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_104_SW_drains_24,
-            '<strong>Sewer Laterals</strong><br /><table><tr><td style="text-align: center;"><img src="legend/2977J_105_SW_laterals_22_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_105_SW_laterals_22_InstallNperSFPWSTD871961.png" /></td><td>Install (N) per SFPW STD 87,196</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_105_SW_laterals_22_ReplaceEifDirected2.png" /></td><td>Replace (E) if Directed</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_105_SW_laterals_22,
-            '<strong>Flatwork</strong><br /><table><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R040.png" /></td><td>R-3/4: Grinding and Paving</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R051.png" /></td><td>R-5: 8in Concrete Base</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R062.png" /></td><td>R-6: 10in Concrete Base</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R073.png" /></td><td>R-7: Concrete Pavement, Gutter or Parking Strip</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R084.png" /></td><td>R-8: 3.5in Sidewalk</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R105.png" /></td><td>R-10: 6in Wide Concrete Curb</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R116.png" /></td><td>R-11: Combined Curb and Gutter</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R127.png" /></td><td>R-12: Concrete Curb Ramp</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_200_flatwork_19,
+            '<img src="legend/2977J_010_PRJCT_DWGS_18_SW2.png" width="12" height="12"><span style="vertical-align:top">&nbsp; Plan Boundary - SW</span>': layer_2977J_010_PRJCT_DWGS_18_SW,
+            '<img src="legend/2977J_010_PRJCT_DWGS_18_R1.png" width="12" height="12"><span style="vertical-align:top">&nbsp; Plan Boundary - R</span>': layer_2977J_010_PRJCT_DWGS_18_R,
+            '<img src="legend/2977J_010_PRJCT_DWGS_18_CR0.png" width="12" height="12"><span style="vertical-align:top">&nbsp; Plan Boundary - CR</span><br><br>': layer_2977J_010_PRJCT_DWGS_18_CR,
+            '<strong>Sewer Mains</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_InstallN12VCP1.png" /></td><td>Install (N) 12" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN12VCP2.png" /></td><td>Replace (E) with (N) 12" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN18VCP3.png" /></td><td>Replace (E) with (N) 18" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN21VCP4.png" /></td><td>Replace (E) with (N) 21" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_InstallN24VCP5.png" /></td><td>Install (N) 24" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN24VCP6.png" /></td><td>Replace (E) with (N) 24" VCP</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_101_SW_mains_20,
+            '<strong>Sewer Manholes</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_InstallNperSFPWSTDPlan871811.png" /></td><td>Install (N) per SFPW STD Plan 87,181</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_ReplaceEwithNperSFPWSTDPlan871812.png" /></td><td>Replace (E) with (N) per SFPW STD Plan 87,181</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_InstallNperSFPWSTDPlan871823.png" /></td><td>Install (N) per SFPW STD Plan 87,182</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_InstallNAngledperSFPWSTDPlan871824.png" /></td><td>Install (N) Angled per SFPW STD Plan 87,182</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_RemoveE5.png" /></td><td>Remove (E)</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_103_SW_manholes_23,
+            '<strong>Sewer Culverts</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_InstallN10VCP1.png" /></td><td>Install (N) 10" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_ReplaceEifDirected2.png" /></td><td>Replace (E) if Directed</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_PlugandFillE3.png" /></td><td>Plug and Fill (E)</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_102_SW_culverts_21,
+            '<strong>Catch Basins</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_104_SW_drains_24_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_104_SW_drains_24_InstallNperSFPWSTDPlan871881.png" /></td><td>Install (N) per SFPW STD Plan 87,188</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_104_SW_drains_24,
+            '<strong>Sewer Laterals</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_105_SW_laterals_22_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_105_SW_laterals_22_InstallNperSFPWSTD871961.png" /></td><td>Install (N) per SFPW STD 87,196</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_105_SW_laterals_22_ReplaceEifDirected2.png" /></td><td>Replace (E) if Directed</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_105_SW_laterals_22,
+            '<strong>Flatwork</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R040.png" /></td><td>R-3/4: Grinding and Paving</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R051.png" /></td><td>R-5: 8in Concrete Base</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R062.png" /></td><td>R-6: 10in Concrete Base</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R073.png" /></td><td>R-7: Concrete Pavement, Gutter or Parking Strip</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R084.png" /></td><td>R-8: 3.5in Sidewalk</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R105.png" /></td><td>R-10: 6in Wide Concrete Curb</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R116.png" /></td><td>R-11: Combined Curb and Gutter</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R127.png" /></td><td>R-12: Concrete Curb Ramp</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_200_flatwork_19,
             "OSM Standard": layer_OSMStandard_0,
         }).addTo(map);
         setBounds();
