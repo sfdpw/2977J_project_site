@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+
+/*.map_page {
+
+    overflow-y: auto;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    float: left;
+
+}*/
+
+.spec_page {
+
+    position: absolute;
+    width: 100%;
+    max-height: 100%;
+    /* top: 10%; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    float: left;*/
+
+}
+
+.spec_card_header {
+
+    padding: 0px;
+
+}
+
+.grid-parent-map-page {
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 11fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100%
+}
+
+
+.grid-div-menu-nav-map {
+
+    grid-area: 1 / 1 / 2 / 3;
+    height: 100%;
+}
+
+.grid-div-map {
+
+    grid-area: 2 / 1 / 3 / 2;
+    /* overflow-y: scroll; */
+    /* float: left; */
+    width: 100%;
+    /* max-height: 100%; */
+    font-size: normal;
+
+}
+
+.grid-div-accordion-menu {
+    overflow-y: scroll;
+    height: 100%;
+    grid-area: 2 / 2 / 3 / 3;
+
+}
+
+.grid-parent-other-page {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 11fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+
+.grid-div-menu-nav-other { 
+
+    grid-area: 1 / 1 / 2 / 2;
+    height: 100%;
+    
+    }
+
+.grid-div-page-body-other {
+
+    grid-area: 2 / 1 / 3 / 2;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    position: relative;
+    
+    }
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
+/* @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap'); */
+
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.active-custom a {
+    color: #DDC966 !important;
+
+}
+
+.nav-item-modified {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-link-custom {
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+}
+
+.menu_nav {
+
+    height: 100%;
+
+}
+
+.navbar {
+
+    height: 100%;
+    
+}
+
+
+.dropdown-menu {
+
+    font-size: 14px;
+
+}
+
+.navbar-collapse {
+
+    background-color: #456aaa;
+
+}
+
+.bg-primary {
+
+    background-color: #456aaa !important;
+
+}
