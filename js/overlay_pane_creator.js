@@ -1,3 +1,77 @@
+// U
+
+map.createPane('pane_2977J_dwg_U01_a_6');
+map.getPane('pane_2977J_dwg_U01_a_6').style.zIndex = 2;
+var img_2977J_dwg_U01_a_6 = 'data/2977J_dwg_U01_a_6.png';
+var img_bounds_2977J_dwg_U01_a_6 = [[37.7220776727832,-122.4034847741319],[37.72460746908069,-122.39945474117124]];
+var layer_2977J_dwg_U01_a_6 = new L.imageOverlay(img_2977J_dwg_U01_a_6,
+    img_bounds_2977J_dwg_U01_a_6, {
+        pane: 'pane_2977J_dwg_U01_a_6'
+    });
+bounds_group.addLayer(layer_2977J_dwg_U01_a_6);
+
+
+
+map.createPane('pane_2977J_dwg_U01_b_5');
+map.getPane('pane_2977J_dwg_U01_b_5').style.zIndex = 3;
+var img_2977J_dwg_U01_b_5 = 'data/2977J_dwg_U01_b_5.png';
+var img_bounds_2977J_dwg_U01_b_5 = [[37.722271249512175,-122.4015834064803],[37.72481986670473,-122.39753670147171]];
+var layer_2977J_dwg_U01_b_5 = new L.imageOverlay(img_2977J_dwg_U01_b_5,
+    img_bounds_2977J_dwg_U01_b_5, {
+        pane: 'pane_2977J_dwg_U01_b_5'
+    });
+bounds_group.addLayer(layer_2977J_dwg_U01_b_5);
+
+
+
+map.createPane('pane_2977J_dwg_U02_a_4');
+map.getPane('pane_2977J_dwg_U02_a_4').style.zIndex = 4;
+var img_2977J_dwg_U02_a_4 = 'data/2977J_dwg_U02_a_4.png';
+var img_bounds_2977J_dwg_U02_a_4 = [[37.72323775714205,-122.40742785383425],[37.72496692643045,-122.40471329807902]];
+var layer_2977J_dwg_U02_a_4 = new L.imageOverlay(img_2977J_dwg_U02_a_4,
+    img_bounds_2977J_dwg_U02_a_4, {
+        pane: 'pane_2977J_dwg_U02_a_4'
+    });
+bounds_group.addLayer(layer_2977J_dwg_U02_a_4);
+
+
+
+map.createPane('pane_2977J_dwg_U02_b_3');
+map.getPane('pane_2977J_dwg_U02_b_3').style.zIndex = 5;
+var img_2977J_dwg_U02_b_3 = 'data/2977J_dwg_U02_b_3.png';
+var img_bounds_2977J_dwg_U02_b_3 = [[37.71995954350991,-122.39924722064777],[37.72165247708584,-122.39655462977645]];
+var layer_2977J_dwg_U02_b_3 = new L.imageOverlay(img_2977J_dwg_U02_b_3,
+    img_bounds_2977J_dwg_U02_b_3, {
+        pane: 'pane_2977J_dwg_U02_b_3'
+    });
+bounds_group.addLayer(layer_2977J_dwg_U02_b_3);
+
+
+
+map.createPane('pane_2977J_dwg_U03_a_2');
+map.getPane('pane_2977J_dwg_U03_a_2').style.zIndex = 6;
+var img_2977J_dwg_U03_a_2 = 'data/2977J_dwg_U03_a_2.png';
+var img_bounds_2977J_dwg_U03_a_2 = [[37.721986572002486,-122.41232261699811],[37.723713854285705,-122.4096156257807]];
+var layer_2977J_dwg_U03_a_2 = new L.imageOverlay(img_2977J_dwg_U03_a_2,
+    img_bounds_2977J_dwg_U03_a_2, {
+        pane: 'pane_2977J_dwg_U03_a_2'
+    });
+bounds_group.addLayer(layer_2977J_dwg_U03_a_2);
+
+
+
+map.createPane('pane_2977J_dwg_U03_b_1');
+map.getPane('pane_2977J_dwg_U03_b_1').style.zIndex = 7;
+var img_2977J_dwg_U03_b_1 = 'data/2977J_dwg_U03_b_1.png';
+var img_bounds_2977J_dwg_U03_b_1 = [[37.72274544440044,-122.40935406004473],[37.72447409704441,-122.40664295779379]];
+var layer_2977J_dwg_U03_b_1 = new L.imageOverlay(img_2977J_dwg_U03_b_1,
+    img_bounds_2977J_dwg_U03_b_1, {
+        pane: 'pane_2977J_dwg_U03_b_1'
+    });
+bounds_group.addLayer(layer_2977J_dwg_U03_b_1);
+
+
+
 // SW
 
 map.createPane('pane_2977J_dwg_SW01_17');

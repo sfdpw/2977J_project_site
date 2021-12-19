@@ -188,6 +188,21 @@
         
         function style_2977J_010_PRJCT_DWGS_18_0(feature) {
             switch (String(feature.properties.LAYER_TYPE)) {
+                 case 'PLAN_BOUNDARY_U':
+                    return {
+                        pane: 'pane_2977J_010_PRJCT_DWGS_18_U',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 0.5,
+                            fillColor: 'rgba(125, 138, 143, 0.5)',
+                            interactive: true,
+                    }
+                    break;
                 case 'PLAN_BOUNDARY_SW':
                     return {
                         pane: 'pane_2977J_010_PRJCT_DWGS_18_SW',
@@ -466,6 +481,7 @@
     <script src="js/layer_toggle/add_layer_012_SW.js"></script>
     <script src="js/layer_toggle/add_layer_013_R.js"></script>
     <script src="js/layer_toggle/add_layer_014_CR.js"></script>
+    <script src="js/layer_toggle/add_layer_015_U.js"></script>
     <script src="js/layer_toggle/add_line_layer_SW_main.js"></script>
     <script src="js/layer_toggle/add_line_layer_SW_clvt.js"></script>
     <script src="js/layer_toggle/add_line_layer_SW_lateral.js"></script>

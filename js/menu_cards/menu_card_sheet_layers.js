@@ -18,12 +18,12 @@ document.getElementById("map_master_menu").innerHTML +=
               <table>\
                 <tr>\
                   <td>\
-                    <input type="checkbox" id="011_U_checkbox" onchange="U_011_toggle()">\
+                    <input type="checkbox" id="015_U_checkbox" onchange="U_015_toggle()">\
                   </td>\
                   <td>\
-                    <img src="legend/2977J_011_U_utility_occupancy.png" width="13" height="13"\
+                    <img src="legend/2977J_015_U_utility_occupancy.png" width="13" height="13"\
                          alt="Layer Symbol - U - Utility Occupancy"/>\
-                    <label class="layer_label" for="011_U_checkbox">U - Utility Occupancy</label>\
+                    <label class="layer_label" for="015_U_checkbox">U - Utility Occupancy</label>\
                   </td>\
                 </tr>\
                 <tr>\

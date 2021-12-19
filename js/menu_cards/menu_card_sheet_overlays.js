@@ -3,9 +3,10 @@ var overlay_menu_subsection_content_SW = "";
 var overlay_menu_subsection_content_R = "";
 var overlay_menu_subsection_content_CR = "";
 
-//for (var ii = 0; ii < json_104_U_utility_occupancy_316['features'].length; ii++) {
-//  overlay_menu_subsection_content_U += json_104_U_utility_occupancy_316['features'][ii].properties.SHEET + '<br>';
-//}
+for (var ii = 0; ii < layer_filter('PLAN_BOUNDARY_U', json_2977J_010_PRJCT_DWGS_18)['features'].length; ii++) {
+  overlay_menu_subsection_content_U += layer_filter('PLAN_BOUNDARY_U',
+  json_2977J_010_PRJCT_DWGS_18)['features'][ii].properties.SHEET + '<br>';
+}
 
 for (var ii = 0; ii < layer_filter('PLAN_BOUNDARY_SW', json_2977J_010_PRJCT_DWGS_18)['features'].length; ii++) {
   overlay_menu_subsection_content_SW += layer_filter('PLAN_BOUNDARY_SW',
@@ -39,6 +40,26 @@ var menu_card_sheet_overlay_content =
             aria-labelledby="heading_sheet_overlays_0" data-parent="#map_master_menu">\
          <div class="card-body">\
          <div class="scroll_card">\
+\
+           <div class="card">\
+             <div class="card-header p-0" id="sheet_overlays_U">\
+               <h2 class="mb-0">\
+                 <button class="btn btn-link collapsed" type="button"\
+                         data-toggle="collapse" data-target="#heading_sheet_overlays_0_collapse_U"\
+                         aria-expanded="false" aria-controls="heading_sheet_overlays_0_collapse_U">\
+                   <strong>U - Utilities</strong>\
+                 </button>\
+               </h2>\
+             </div>\
+             <div id="heading_sheet_overlays_0_collapse_U" class="collapse"\
+                      aria-labelledby="sheet_overlays_U" data-parent="#heading_sheet_overlays_0">\
+               <div class="card-body">\
+                 <div class="scroll_card_sub">' +
+  overlay_menu_subsection_content_U +
+  '</div>\
+               </div>\
+             </div>\
+           </div>\
 \
            <div class="card">\
              <div class="card-header p-0" id="sheet_overlays_SW">\
