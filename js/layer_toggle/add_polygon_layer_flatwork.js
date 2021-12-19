@@ -33,7 +33,7 @@ function flatwork_layer_toggle(layer_index, master_layer_array, local_json_layer
               //  }
 
 
-                if (local_json_layer_obj['features'][ii].properties.INST_ID.includes(property_filters.substring(0,4).replace('-','_')))
+                if (local_json_layer_obj['features'][ii].properties.INST_ID.substring(0,4) == property_filters.substring(0,4).replace('-','_'))
 
                 {
 
@@ -69,8 +69,6 @@ function flatwork_layer_toggle(layer_index, master_layer_array, local_json_layer
 
 }
 
-
-
 function flatwork_layer_styler(feature) {
   return {
     pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
@@ -86,11 +84,6 @@ function flatwork_layer_styler(feature) {
     interactive: true,
   }
 }
-
-
-
-
-
 
 function unpack_flatwork_feature_description(property_filters)
 
