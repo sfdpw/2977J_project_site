@@ -239,375 +239,75 @@ function pop_up_creator_for_domain(feature, layer)
 
         popupContent += pp_history_details(feature);
 
-    } else if (layer.feature.L_index_stored_in_each_feature >= CR_fltwrk_index_limits[0] &&
-        layer.feature.L_index_stored_in_each_feature <= CR_fltwrk_index_limits[1])
+    } else if (layer.feature.L_index_stored_in_each_feature >= R_fltwrk_index_limits[0] &&
+        layer.feature.L_index_stored_in_each_feature <= R_fltwrk_index_limits[1])
 
     {
 
-        var bid_item_code = (feature.properties.install_id.substring(0, 5).replace('CR_0', 'CR_')).replace('_', '-');
+        var bid_item_code = (feature.properties.INST_ID.substring(0, 4).replace('R_0', 'R_')).replace('_', '-');
 
-        var areacalcs = ''
+        var areacalcs = '';
 
-        if (
-            bid_item_code == 'CR-3' ||
-            bid_item_code == 'CR-5' ||
-            bid_item_code == 'CR-7' ||
-            bid_item_code == 'CR-8' ||
-            bid_item_code == 'CR-9' ||
-            bid_item_code == 'CR-11' ||
-            bid_item_code == 'CR-16' ||
-            bid_item_code == 'CR-17'
-        )
+//        if (
+//            bid_item_code == 'R-5' ||
+//            bid_item_code == 'R-6' ||
+//            bid_item_code == 'R-7' ||
+//            bid_item_code == 'R-8'
+//        )
 
-        {
+//        {
 
-            areacalcs =
-                '<strong>Area Calculation</strong><br>' +
-                '<table style="width:100%">\
-           <tr>\
-             <td>Worksheet ID:</td>\
-             <td style=\"text-align: right\">' + feature.properties.pp_qty_id + '</td>\
-             <td></td>\
-           </tr>\
-           <tr>\
-             <td>Modifier:</td>\
-             <td style=\"text-align: right\">' +  feature.properties.mdfr_instl.toFixed(2) + '</td>\
-             <td></td>\
-           </tr>\
-           <tr>\
-             <td>Width:</td>\
-             <td style=\"text-align: right\">' + format_unit(feature.properties.wdth_instl, 'LF') + '</td>\
-             <td>LF</td>\
-           </tr>\
-           <tr>\
-             <td>Length:</td>\
-             <td style=\"text-align: right\">' + format_unit(feature.properties.lnth_instl, 'LF') + '</td>\
-             <td>LF</td>\
-           </tr>\
-           <tr>\
-             <td>Area:</td>\
-             <td style=\"text-align: right\">' +
-                format_unit(
-                    feature.properties.wdth_instl * feature.properties.lnth_instl * feature.properties.mdfr_instl,
-                    'SF') + '</td>\
-             <td>SF</td>\
-           </tr>\
-         </table><br>';
+//            areacalcs =
+//                '<strong>Area Calculation</strong><br>' +
+//                '<table style="width:100%">\
+//           <tr>\
+//            <td>Worksheet ID:</td>\
+//             <td style=\"text-align: right\">' + feature.properties.pp_qty_id + '</td>\
+//             <td></td>\
+//           </tr>\
+//           <tr>\
+//             <td>Modifier:</td>\
+//             <td style=\"text-align: right\">' +  feature.properties.mdfr_instl.toFixed(2) + '</td>\
+//             <td></td>\
+//           </tr>\
+//           <tr>\
+//             <td>Width:</td>\
+//             <td style=\"text-align: right\">' + format_unit(feature.properties.wdth_instl, 'LF') + '</td>\
+//             <td>LF</td>\
+//           </tr>\
+//           <tr>\
+//             <td>Length:</td>\
+//             <td style=\"text-align: right\">' + format_unit(feature.properties.lnth_instl, 'LF') + '</td>\
+//             <td>LF</td>\
+//           </tr>\
+//           <tr>\
+//             <td>Area:</td>\
+//             <td style=\"text-align: right\">' +
+//                format_unit(
+//                   feature.properties.wdth_instl * feature.properties.lnth_instl * feature.properties.mdfr_instl,
+//                    'SF') + '</td>\
+//             <td>SF</td>\
+//           </tr>\
+//         </table><br>';
 
-        } else if ( bid_item_code == 'SW-43' )
-
-        {
-
-            areacalcs =
-                '<strong>Area Calculation</strong><br>' +
-                '<table style="width:100%">\
-           <tr>\
-             <td>Worksheet ID:</td>\
-             <td style=\"text-align: right\">' + feature.properties.pp_qty_id + '</td>\
-             <td></td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;</td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Total Area Installed</strong></td>\
-             <td></td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;Modifier:</td>\
-             <td style=\"text-align: right\">' +  feature.properties.mdfr_instl.toFixed(2) + '</td>\
-             <td></td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;Width:</td>\
-             <td style=\"text-align: right\">' + format_unit(feature.properties.wdth_instl, 'LF') + '</td>\
-             <td>LF</td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;Length:</td>\
-             <td style=\"text-align: right\">' + format_unit(feature.properties.lnth_instl, 'LF') + '</td>\
-             <td>LF</td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;Area:</td>\
-             <td style=\"text-align: right\">' +
-                format_unit(
-                    feature.properties.wdth_instl * feature.properties.lnth_instl * feature.properties.mdfr_instl,
-                    'SF') + '</td>\
-             <td>SF</td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;</td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Incidental Area Deduction</strong></td>\
-             <td></td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;Modifier:</td>\
-             <td style=\"text-align: right\">' +  feature.properties.mdfr_inc.toFixed(2) + '</td>\
-             <td></td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;Width:</td>\
-             <td style=\"text-align: right\">' + format_unit(feature.properties.wdth_inc, 'LF') + '</td>\
-             <td>LF</td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;Length:</td>\
-             <td style=\"text-align: right\">' + format_unit(feature.properties.lnth_inc, 'LF') + '</td>\
-             <td>LF</td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;Area:</td>\
-             <td style=\"text-align: right\">' +
-                format_unit(
-                    feature.properties.wdth_inc * feature.properties.lnth_inc * feature.properties.mdfr_inc,
-                    'SF') + '</td>\
-             <td>SF</td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;</td>\
-           </tr>\
-           <tr>\
-             <td>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Compensable Area:</strong></td>\
-             <td style=\"text-align: right\">' +
-                format_unit(
-                    feature.properties.wdth_instl * feature.properties.lnth_instl * feature.properties.mdfr_instl +
-                    feature.properties.wdth_inc * feature.properties.lnth_inc * feature.properties.mdfr_inc,
-                    'SF') + '</td>\
-             <td>SF</td>\
-           </tr>\
-         </table><br>';
-
-        } else if (bid_item_code == 'CR-4' || bid_item_code == 'CR-6')
-
-        {
-
-            var depthvalue = 1;
-
-            if (bid_item_code == 'CR-6') {
-                depthvalue = 0.5;
-            }
-
-            areacalcs =
-
-                '<strong>Volume Calculation</strong><br>' +
-                '<table>\
-           <tr>\
-             <td>Worksheet ID:</td>\
-             <td style=\"text-align: right\">' + feature.properties.pp_qty_id + '</td>\
-             <td></td>\
-           </tr>\
-           <tr>\
-             <td>Modifier:</td>\
-             <td style=\"text-align: right\">' + feature.properties.mdfr_instl.toFixed(2) + '</td>\
-             <td></td>\
-           </tr>\
-           <tr>\
-             <td>Width:</td>\
-             <td style=\"text-align: right\">' + format_unit(feature.properties.wdth_instl, 'LF') + '</td>\
-             <td>LF</td>\
-           </tr>\
-           <tr>\
-             <td>Length:</td>\
-             <td style=\"text-align: right\">' + format_unit(feature.properties.lnth_instl, 'LF') + '</td>\
-             <td>LF</td>\
-           </tr>\
-           <tr>\
-             <td>Depth:</td>\
-             <td style=\"text-align: right\">' + depthvalue.toFixed(2) + '</td>\
-             <td>LF</td>\
-           </tr>\
-           <tr>\
-             <td>Volume:</td>\
-             <td style=\"text-align: right\">' +
-                format_unit(
-                    feature.properties.wdth_instl * feature.properties.lnth_instl *
-                    feature.properties.mdfr_instl * depthvalue,
-                    'CY') + '</td>\
-             <td>CF</td>\
-           </tr>\
-           <tr>\
-             <td>Volume:</td>\
-             <td style=\"text-align: right\">' +
-                format_unit(
-                    feature.properties.wdth_instl * feature.properties.lnth_instl *
-                    feature.properties.mdfr_instl * depthvalue / 27,
-                    'CY') + '</td>\
-             <td>CY</td>\
-           </tr>\
-         </table><br>';
-
-        }
+//        } 
 
         var popupContent =
             '<strong>Instance Id</strong><br>' +
-            feature.properties.install_id.replace(/_/g, "-") + '<br><br>' +
+            feature.properties.INST_ID.replace(/_/g, "-") + '<br><br>' +
             '<strong>Description</strong><br>' +
             unpack_flatwork_feature_description(bid_item_code) +
             '<br><br>' +
             '<strong>Status</strong><br>' +
             feature.properties.STATUS + '<br><br>' +
             '<strong>Relevant Documents</strong><br>' +
-            feature.properties.rlvnt +
+            feature.properties.RLVNT +
             '<br><br>' + areacalcs +
             '<strong>Payment History</strong><br>';
 
         popupContent += pp_history_details(feature);
 
-    } else if (layer.feature.L_index_stored_in_each_feature >= E_conduit_index_limits[0] &&
-        layer.feature.L_index_stored_in_each_feature <= E_conduit_index_limits[1])
-
-    {
-
-        var bid_item_code = (feature.properties.install_id.substring(0, 4).replace('E_0', 'E_')).replace('_', '-');
-
-        var popupContent =
-            '<strong>Instance Id</strong><br>' +
-            feature.properties.install_id.replace(/_/g, "-") + '<br><br>' +
-            '<strong>Description</strong><br>' +
-            unpack_conduit_feature_description(bid_item_code) +
-            '<br><br>' +
-            '<strong>Run Number</strong><br>' +
-            feature.properties.run_no + '<br><br>' +
-            '<strong>Status</strong><br>' +
-            feature.properties.STATUS + '<br><br>' +
-            '<strong>Relevant Documents</strong><br>' +
-            feature.properties.rlvnt +
-            '<br><br>' +
-            '<strong>Payment History</strong><br>';
-
-        popupContent += pp_history_details(feature);
-
-
-    } else if (layer.feature.L_index_stored_in_each_feature >= E_pullbox_index_limits[0] &&
-        layer.feature.L_index_stored_in_each_feature <= E_pullbox_index_limits[1])
-
-    {
-
-        var bid_item_code = (feature.properties.install_id.substring(0, 4).replace('E_0', 'E_')).replace('_', '-');
-
-        var popupContent =
-            '<strong>Instance Id</strong><br>' +
-            feature.properties.install_id.replace(/_/g, "-") + '<br><br>' +
-            '<strong>Description</strong><br>' +
-            unpack_pullbox_feature_description(bid_item_code) +
-            '<br><br>' +
-            '<strong>Status</strong><br>' +
-            feature.properties.STATUS + '<br><br>' +
-            '<strong>Relevant Documents</strong><br>' +
-            feature.properties.rlvnt +
-            '<br><br>' +
-            '<strong>Payment History</strong><br>';
-
-        popupContent += pp_history_details(feature);
-
-
-    } else if (layer.feature.L_index_stored_in_each_feature >= E_pole_index_limits[0] &&
-        layer.feature.L_index_stored_in_each_feature <= E_pole_index_limits[1])
-
-    {
-
-        var bid_item_code = (feature.properties.BID_ITEM);
-
-        var popupContent =
-            '<strong>Location</strong><br>' +
-            feature.properties.LOCATION + '<br><br>' +
-            '<strong>Pole ID</strong><br>' +
-            feature.properties.POLE_ID + 
-            '<br><br>' +
-            '<strong>Description</strong><br>' +
-            unpack_TS_pole_feature_description(bid_item_code) +
-            '<br><br>' +
-            '<strong>Status</strong><br>' +
-            feature.properties.STATUS + '<br><br>' +
-            '<strong>Relevant Documents</strong><br>' +
-            feature.properties.RLVNT +
-            '<br><br>' +
-            '<strong>Payment History</strong><br>';
-
-             popupContent += pp_history_details(feature);
-
-
-    } else if (layer.feature.L_index_stored_in_each_feature >= E_signal_mounting_index_limits[0] &&
-        layer.feature.L_index_stored_in_each_feature <= E_signal_mounting_index_limits[1])
-
-    {
-
-        var bid_item_code = (feature.properties.BID_ITEM);
-
-        var popupContent =
-            '<strong>Location</strong><br>' +
-            feature.properties.LOCATION + '<br><br>' +
-            '<strong>Pole ID</strong><br>' +
-            feature.properties.POLE_ID +  '<br><br>' +
-            '<strong>Signal No.(s)</strong><br>' +
-            feature.properties.SIG_NO +  '<br><br>' +
-            '<strong>Description</strong><br>' +
-            unpack_signal_mountings_feature_description(bid_item_code) +
-            '<br><br>' +
-            '<strong>Status</strong><br>' +
-            feature.properties.STATUS + '<br><br>' +
-            '<strong>Relevant Documents</strong><br>' +
-            feature.properties.RLVNT +
-            '<br><br>' +
-            '<strong>Payment History</strong><br>';
-
-             popupContent += pp_history_details(feature);
-
-
-    } else if (layer.feature.L_index_stored_in_each_feature >= E_signals_index_limits[0] &&
-        layer.feature.L_index_stored_in_each_feature <= E_signals_index_limits[1])
-
-    {
-
-        var bid_item_code = (feature.properties.BID_ITEM);
-
-        var popupContent =
-            '<strong>Location</strong><br>' +
-            feature.properties.LOCATION + '<br><br>' +
-            '<strong>Pole ID</strong><br>' +
-            feature.properties.POLE_ID +  '<br><br>' +
-            '<strong>Signal No.(s)</strong><br>' +
-            feature.properties.SIG_NO +  '<br><br>' +
-            '<strong>Signal Type</strong><br>' +
-            feature.properties.SIG_TYPE +
-            '<br><br>' +
-            '<strong>Status</strong><br>' +
-            feature.properties.STATUS + '<br><br>' +
-            '<strong>Relevant Documents</strong><br>' +
-            feature.properties.RLVNT +
-            '<br><br>' +
-            '<strong>Payment History</strong><br>';
-
-             popupContent += pp_history_details(feature);
-
-
-    } else if (layer.feature.L_index_stored_in_each_feature >= E_TS_cabinet_index_limits[0] &&
-        layer.feature.L_index_stored_in_each_feature <= E_TS_cabinet_index_limits[1])
-
-    {
-
-        var bid_item_code = (feature.properties.install_id.substring(0, 4).replace('E_0', 'E_')).replace('_', '-');
-
-        var popupContent =
-            '<strong>Instance Id</strong><br>' +
-            feature.properties.install_id.replace(/_/g, "-") + '<br><br>' +
-            '<strong>Description</strong><br>' +
-            unpack_TS_cabinet_feature_description(bid_item_code) +
-            '<br><br>' +
-            '<strong>Status</strong><br>' +
-            feature.properties.STATUS + '<br><br>' +
-            '<strong>Relevant Documents</strong><br>' +
-            feature.properties.rlvnt +
-            '<br><br>' +
-            '<strong>Payment History</strong><br>';
-
-        popupContent += pp_history_details(feature);
-
-
-    }
+    }  
 
     layer.bindPopup(popupContent, {
         maxHeight: 400

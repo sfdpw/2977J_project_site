@@ -97,11 +97,16 @@
        add_feature_layer('SW_MH', 505, json_2977J_103_SW_manholes_23, 'Install (N) Angled per SFPW STD Plan 87,182', 'rgba(2, 101, 45, 1.0)');
    
    
-       //var CR_fltwrk_index_limits = [600, 601];        
-       
-       
-       
-       
+       var R_fltwrk_index_limits = [601, 608];        // Layer 600 saved for R-03
+       add_feature_layer('R', 601, json_2977J_200_flatwork_19, 'R-04: 1/2in HMA','#6a62d1');  
+       add_feature_layer('R', 602, json_2977J_200_flatwork_19, 'R-05: 8in Base','#91d532');         
+       add_feature_layer('R', 603, json_2977J_200_flatwork_19, 'R-06: 10in Base','#b714ef');         
+       add_feature_layer('R', 604, json_2977J_200_flatwork_19, 'R-07: Parking Strip, Gutter','#24ddaf');                
+       add_feature_layer('R', 605, json_2977J_200_flatwork_19, 'R-08: 3.5in Sidewalk','#e1ad12');                
+       add_feature_layer('R', 606, json_2977J_200_flatwork_19, 'R-10: Curb','#2291e3');                  
+       add_feature_layer('R', 607, json_2977J_200_flatwork_19, 'R-11: Comb. Curb and Gutter','#d3200e'); 
+       add_feature_layer('R', 608, json_2977J_200_flatwork_19, 'R-12: Curb Ramps','#5ae166');       
+              
        //var E_pullbox_index_limits = [700, 701];
         
         
@@ -126,6 +131,7 @@
       <script src="js/menu_cards/menu_card_sheet_layers.js"></script>
       <script src="js/menu_cards/menu_card_sheet_overlays.js"></script>
       <script src="js/menu_cards/menu_card_sewer_features.js"></script>
+      <script src="js/menu_cards/menu_card_flatwork_features.js"></script>
     </div>
   </div>
       
@@ -251,55 +257,6 @@
                     break;
                    
             }
-        }
-          
-        function pop_2977J_200_flatwork_19(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    for (i in e.target._eventParents) {
-                        e.target._eventParents[i].resetStyle(e.target);
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['INST_ID'] !== null ? autolinker.link(feature.properties['INST_ID'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">&nbsp;</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['STATUS'] !== null ? autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">&nbsp;</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['PP_HISTORY'] !== null ? autolinker.link(feature.properties['PP_HISTORY'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">&nbsp;</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['SUBMITTALS'] !== null ? autolinker.link(feature.properties['SUBMITTALS'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">&nbsp;</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['RLVNT'] !== null ? autolinker.link(feature.properties['RLVNT'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">&nbsp;</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['LOCATION'] !== null ? autolinker.link(feature.properties['LOCATION'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {
-                maxHeight: 400
-            });
         }
 
         function style_2977J_200_flatwork_19_0(feature) {
@@ -450,7 +407,7 @@
             dataVar: 'json_2977J_200_flatwork_19',
             layerName: 'layer_2977J_200_flatwork_19',
             pane: 'pane_2977J_200_flatwork_19',
-            onEachFeature: pop_2977J_200_flatwork_19,
+            onEachFeature: pop_up_creator_for_domain,
             style: style_2977J_200_flatwork_19_0,
         });
 
@@ -487,7 +444,8 @@
     <script src="js/layer_toggle/add_line_layer_SW_lateral.js"></script>
     <script src="js/layer_toggle/add_point_layer_SW_MH.js"></script>    
     <script src="js/layer_toggle/add_point_layer_SW_drain.js"></script>      
-    
+    <script src="js/layer_toggle/add_polygon_layer_flatwork.js"></script>      
+        
     <script>
         function handleChange(checkbox, layer) {
             if (checkbox.checked == true) {
