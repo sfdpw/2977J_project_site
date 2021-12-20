@@ -121,20 +121,26 @@ function popup_spec_entry_creator(popup_args = null)
 
         {
 
-            file_name = popup_args[ii];
+            file_name = popup_args[ii].replace(/ /g,'_');
             file_desc = popup_args[ii + 1];
+
+
 
             for (var jj = 0; jj < list_of_specs.length; jj++)
 
             {
 
+             //alert(list_of_specs[jj].substring(6, 6 + file_name.length));
 
-                if (file_name == list_of_specs[jj].substring(8, 8 + file_name.length))
+                if (file_name == list_of_specs[jj].substring(6, 6 + file_name.length))
 
                 {
+                
+                    //alert(file_name);
 
                     file_name_length = file_name.length;
-                    file_name = list_of_specs[jj].substring(8, list_of_specs[jj].length - 4);
+                    file_name = list_of_specs[jj].substring(6, list_of_specs[jj].length - 4);
+
 
 
                 }
@@ -146,11 +152,11 @@ function popup_spec_entry_creator(popup_args = null)
             if (file_desc == null)
 
             {
-                output_string = output_string.concat("<a href=\".\\specs\\2977J - ", file_name, ".pdf\" target=\"_blank\">", file_name.substring(0, file_name_length), "<\/a>", file_name.substring(file_name_length, file_name.length));
+                output_string = output_string.concat("<a href=\".\\specs\\2977J_", file_name, ".pdf\" target=\"_blank\">", file_name.substring(0, file_name_length), "<\/a> - ", file_name.substring(file_name_length+1, file_name.length).replace(/_/g,' '));
             } else
 
             {
-                output_string = output_string.concat("<a href=\".\\specs\\2977J - ", file_name, ".pdf\" target=\"_blank\">", file_name.substring(0, file_name_length), "<\/a>", ' - ', file_desc);
+                output_string = output_string.concat("<a href=\".\\specs\\2977J_", file_name, ".pdf\" target=\"_blank\">", file_name.substring(0, file_name_length).replace(/_/g,' '), "<\/a> - ", file_desc);
             }
 
 
