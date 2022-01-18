@@ -76,6 +76,32 @@ function spec_table()
     }
 
 
+    return_block +=
+
+        '<div style="font-size: small" class="card">\
+            <div class="card-header spec_card_header" id="heading_' + 'SPEC_GEN' + '">\
+              <a class="mb-0">\
+                <button style="font-size: small" class="btn btn-link"\
+                        data-toggle="collapse"\
+                        data-target="#collapse_' + 'SPEC_GEN' + '"\
+                        aria-expanded="flase"\
+                        aria-controls="collapse_' + 'SPEC_GEN' + '">\
+                        <strong>' + 'City Standards and Orders' + '</strong>\
+                </button>\
+              </a>\
+            </div>\
+            <div id="collapse_' + 'SPEC_GEN' + '"\
+                 class="collapse"\
+                 aria-labelledby="heading_' + 'SPEC_GEN' + '"\
+                 data-parent="#accordion">\
+              <div style="max-height:140pt; overflow-y:scroll" class="card-body">\
+                <a href=\"./SFPW_STD_SPECS_draft_as_of_2021_08_09.pdf\" target=\"_blank\">SFPW Engineering Standard Specifications</a><br>\
+                <a href=\"https://sfpublicworks.org/sites/default/files/PW-Order-187005-Signed.pdf\" target=\"_blank\">SFPW Excavation Order 187,005</a>\
+             </div>\
+           </div>\
+         </div>';
+
+
     return_block += '</div>';
 
 
