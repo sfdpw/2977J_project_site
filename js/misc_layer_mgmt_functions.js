@@ -263,7 +263,7 @@ function add_feature_layer(feature_group, layer_index, source_json_layer_obj, pr
                                                                                
       }
       
-     else if (feature_group == 'R')
+     else if (feature_group == 'R_polygon')
 
       {
       
@@ -274,6 +274,18 @@ function add_feature_layer(feature_group, layer_index, source_json_layer_obj, pr
                                            property_filters, rgba_code);}
                                                                                
       }  
+      
+     else if (feature_group == 'R_point')
+
+      {
+           
+       master_layer_array[layer_index].layer_description = property_filters;
+       master_layer_array[layer_index].toggle = 
+       
+          function() {flatwork_point_layer_toggle(layer_index, master_layer_array, local_json_layer_obj,           
+                                           property_filters, rgba_code);}
+                                                                               
+      }       
       
        
     }                                                                          

@@ -106,8 +106,8 @@ function pop_up_creator_for_domain(feature, layer)
             (feature.properties['SCOPE'] !== null ? Autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') +
             '<br><br>\
 <strong>Post-Con Submittal - Video - Response</strong><br>' +
-            feature.properties.SUBMITTALS.TVI_PST_CON.Submittal + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PST_CON.Video +
+            feature.properties.SUBMITTALS.TVI_PST_CON.SUBMITTAL + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PST_CON.VIDEO +
             '<br><br>\
 <strong>Status</strong><br>' +
             (feature.properties['STATUS'] !== null ? Autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') +
@@ -161,14 +161,14 @@ function pop_up_creator_for_domain(feature, layer)
             (feature.properties['SCOPE'] !== null ? Autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') +
             '<br><br>\
 <strong>Pre-Con Submittal - Video - Response</strong><br>' +
-            feature.properties.SUBMITTALS.TVI_PRE_CON.Submittal + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PRE_CON.Video + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PRE_CON.Response +
+            feature.properties.SUBMITTALS.TVI_PRE_CON.SUBMITTAL + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PRE_CON.VIDEO + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PRE_CON.RESPONSE +
             '<br><br>\
 <strong>Post-Con Submittal - Video - Response</strong><br>' +
-            feature.properties.SUBMITTALS.TVI_PST_CON.Submittal + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PST_CON.Video + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PST_CON.Response +
+            feature.properties.SUBMITTALS.TVI_PST_CON.SUBMITTAL + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PST_CON.VIDEO + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PST_CON.RESPONSE +
             '<br><br>\
 <strong>Status</strong><br>' +
             (feature.properties['STATUS'] !== null ? Autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') +
@@ -223,14 +223,14 @@ function pop_up_creator_for_domain(feature, layer)
             (feature.properties['SCOPE'] !== null ? Autolinker.link(feature.properties['SCOPE'].toLocaleString()) : '') +
             '<br><br>\
 <strong>Pre-Con Submittal - Video - Response</strong><br>' +
-            feature.properties.SUBMITTALS.TVI_PRE_CON.Submittal + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PRE_CON.Video + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PRE_CON.Response + 
+            feature.properties.SUBMITTALS.TVI_PRE_CON.SUBMITTAL + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PRE_CON.VIDEO + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PRE_CON.RESPONSE + 
             '<br><br>\
 <strong>Post-Con Submittal - Video - Response</strong><br>' +
-            feature.properties.SUBMITTALS.TVI_PST_CON.Submittal + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PST_CON.Video + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PST_CON.Response +             
+            feature.properties.SUBMITTALS.TVI_PST_CON.SUBMITTAL + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PST_CON.VIDEO + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PST_CON.RESPONSE +             
             '<br><br>\
 <strong>Status</strong><br>' +
             (feature.properties['STATUS'] !== null ? Autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') +
@@ -248,56 +248,24 @@ function pop_up_creator_for_domain(feature, layer)
 
         var areacalcs = '';
 
-//        if (
-//            bid_item_code == 'R-5' ||
-//            bid_item_code == 'R-6' ||
-//            bid_item_code == 'R-7' ||
-//            bid_item_code == 'R-8'
-//        )
-
-//        {
-
-//            areacalcs =
-//                '<strong>Area Calculation</strong><br>' +
-//                '<table style="width:100%">\
-//           <tr>\
-//            <td>Worksheet ID:</td>\
-//             <td style=\"text-align: right\">' + feature.properties.pp_qty_id + '</td>\
-//             <td></td>\
-//           </tr>\
-//           <tr>\
-//             <td>Modifier:</td>\
-//             <td style=\"text-align: right\">' +  feature.properties.mdfr_instl.toFixed(2) + '</td>\
-//             <td></td>\
-//           </tr>\
-//           <tr>\
-//             <td>Width:</td>\
-//             <td style=\"text-align: right\">' + format_unit(feature.properties.wdth_instl, 'LF') + '</td>\
-//             <td>LF</td>\
-//           </tr>\
-//           <tr>\
-//             <td>Length:</td>\
-//             <td style=\"text-align: right\">' + format_unit(feature.properties.lnth_instl, 'LF') + '</td>\
-//             <td>LF</td>\
-//           </tr>\
-//           <tr>\
-//             <td>Area:</td>\
-//             <td style=\"text-align: right\">' +
-//                format_unit(
-//                   feature.properties.wdth_instl * feature.properties.lnth_instl * feature.properties.mdfr_instl,
-//                    'SF') + '</td>\
-//             <td>SF</td>\
-//           </tr>\
-//         </table><br>';
-
-//        } 
-
         var popupContent =
             '<strong>Instance Id</strong><br>' +
             feature.properties.INST_ID.replace(/_/g, "-") + '<br><br>' +
             '<strong>Description</strong><br>' +
             unpack_flatwork_feature_description(bid_item_code) +
-            '<br><br>' +
+            '<br><br>'; 
+            
+          if (bid_item_code == 'R-15')
+          
+            {
+            
+             popupContent += '<strong>Utility</strong><br>'+
+                              feature.properties.UTILITY + '<br><br>';
+             
+             }
+            
+            
+        popupContent +=
             '<strong>Status</strong><br>' +
             feature.properties.STATUS + '<br><br>' +
             '<strong>Relevant Documents</strong><br>' +
@@ -373,5 +341,67 @@ function pp_history_details(ffeature)
     }
 
     return pp_history_details;
+
+}
+
+
+function pp_history_row(bid_item, QTY, UNIT, payment_no, FUND)
+
+{
+
+    var row_string = '';
+    var neg_space = '';
+
+    if (QTY > 0) {
+        neg_space = '&nbsp;';
+    }
+
+
+    if (QTY != 0)
+
+    {
+
+        //if (bid_item.includes('CR-'))
+
+        //{
+
+        //    row_string = '<tr><td style=\"text-align: left\">' +
+        //        format_unit(QTY, UNIT) + '</td><td>' +
+        //        UNIT + ' in</td><td>' +
+        //        payment_no.substring(0, 4) + ' from</td><td>' +
+        //        FUND + '</td></tr>';
+
+
+        //} else
+
+        //{
+
+            var NN = 0; // bid item index
+
+            while (base_sov[NN]["Bid Item"].replace('-0', '-') != bid_item.replace('-0', '-')) {
+
+                NN++;
+            }
+
+            row_string = '<tr><td data-toogle="tooltip" title="' +
+                base_sov[NN]['Bid Item'] + ": " +
+                base_sov[NN]['Description'] + " (" + base_sov[NN]['Unit'] + ')">' +
+                bid_item + ':</td><td style=\"text-align: left\">' + neg_space +
+                format_unit(QTY, UNIT) + '</td><td>' +
+                UNIT + ' in</td><td>' +
+                payment_no.substring(0, 4) + ' from</td><td>' +
+                FUND + '</td></tr>';
+
+        //}
+
+    } else {
+
+
+      row_string = 'Completion shown for clarity;<br>no additional QTY paid.';
+
+
+    }
+
+    return row_string
 
 }

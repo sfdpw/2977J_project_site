@@ -30,7 +30,7 @@
 
     <script src="js/top_nav_bar.js"></script>
     <script src="js/popup_populator.js"></script>
-    <script src="js/popup_content_return.js"></script>    
+
     
     <script src="js/qgis2web_expressions.js"></script>
     <script src="js/L.Control.Locate.min.js"></script>
@@ -51,13 +51,18 @@
 
     <script src="tcps/tcp_list.js"></script>
     <script src="specs/spec_list.js"></script>
-    <script src="data/2977J_010_PRJCT_DWGS_18.js"></script>
     <script src="data/2977J_200_flatwork_19.js"></script>
+    <script src="data/2977J_210_flatwork_points_0.js"></script>    
     <script src="data/2977J_101_SW_mains_20.js"></script>
     <script src="data/2977J_102_SW_culverts_21.js"></script>
     <script src="data/2977J_105_SW_laterals_22.js"></script>
     <script src="data/2977J_103_SW_manholes_23.js"></script>
     <script src="data/2977J_104_SW_drains_24.js"></script>
+    <script src="data/2977J_010_PRJCT_DWGS_18.js"></script>
+    <script src="js/popup_content_return.js"></script>    
+    
+    <script src="js/misc_payment_functions.js"></script>    
+    <script src="data/base_sov.js"></script>
 
 
     <script>
@@ -101,16 +106,18 @@
        add_feature_layer('SW_MH', 505, json_2977J_103_SW_manholes_23, 'Install (N) Angled per SFPW STD Plan 87,182', 'rgba(2, 101, 45, 1.0)');
    
    
-       var R_fltwrk_index_limits = [601, 608];        // Layer 600 saved for R-03
-       add_feature_layer('R', 601, json_2977J_200_flatwork_19, 'R-04: 1/2in HMA','#6a62d1');  
-       add_feature_layer('R', 602, json_2977J_200_flatwork_19, 'R-05: 8in Base','#91d532');         
-       add_feature_layer('R', 603, json_2977J_200_flatwork_19, 'R-06: 10in Base','#b714ef');         
-       add_feature_layer('R', 604, json_2977J_200_flatwork_19, 'R-07: Parking Strip, Gutter','#24ddaf');                
-       add_feature_layer('R', 605, json_2977J_200_flatwork_19, 'R-08: 3.5in Sidewalk','#e1ad12');                
-       add_feature_layer('R', 606, json_2977J_200_flatwork_19, 'R-10: Curb','#2291e3');                  
-       add_feature_layer('R', 607, json_2977J_200_flatwork_19, 'R-11: Comb. Curb and Gutter','#d3200e'); 
-       add_feature_layer('R', 608, json_2977J_200_flatwork_19, 'R-12: Curb Ramps','#5ae166');       
-              
+       var R_fltwrk_index_limits = [601, 610];        // Layer 600 saved for R-03
+       add_feature_layer('R_polygon', 601, json_2977J_200_flatwork_19, 'R-04: 1/2in HMA','#6a62d1');  
+       add_feature_layer('R_polygon', 602, json_2977J_200_flatwork_19, 'R-05: 8in Base','#91d532');         
+       add_feature_layer('R_polygon', 603, json_2977J_200_flatwork_19, 'R-06: 10in Base','#b714ef');         
+       add_feature_layer('R_polygon', 604, json_2977J_200_flatwork_19, 'R-07: Parking Strip, Gutter','#24ddaf');                
+       add_feature_layer('R_polygon', 605, json_2977J_200_flatwork_19, 'R-08: 3.5in Sidewalk','#e1ad12');                
+       add_feature_layer('R_polygon', 606, json_2977J_200_flatwork_19, 'R-09: 4in Curb','#b33600');                
+       add_feature_layer('R_polygon', 607, json_2977J_200_flatwork_19, 'R-10: 6in Curb','#2291e3');                  
+       add_feature_layer('R_polygon', 608, json_2977J_200_flatwork_19, 'R-11: Comb. Curb and Gutter','#d3200e'); 
+       add_feature_layer('R_polygon', 609, json_2977J_200_flatwork_19, 'R-12: Curb Ramps','#5ae166');       
+       add_feature_layer('R_point', 610, json_2977J_210_flatwork_points_0, 'R-15: Type III PBs', '#487bb6');       
+                     
        //var E_pullbox_index_limits = [700, 701];
         
         
@@ -263,171 +270,8 @@
             }
         }
 
-        function style_2977J_200_flatwork_19_0(feature) {
-            switch (String(feature.properties.INST_ID.substring(0, 4))) {
-                case 'R_04':
-                    return {
-                        pane: 'pane_2977J_200_flatwork_19',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 1,
-                            fillColor: 'rgba(106,97,209,0.5)',
-                            interactive: true,
-                    }
-                    break;
-                case 'R_05':
-                    return {
-                        pane: 'pane_2977J_200_flatwork_19',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 1,
-                            fillColor: 'rgba(146,214,49,0.5)',
-                            interactive: true,
-                    }
-                    break;
-                case 'R_06':
-                    return {
-                        pane: 'pane_2977J_200_flatwork_19',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 1,
-                            fillColor: 'rgba(184,19,239,0.5)',
-                            interactive: true,
-                    }
-                    break;
-                case 'R_07':
-                    return {
-                        pane: 'pane_2977J_200_flatwork_19',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 1,
-                            fillColor: 'rgba(35,222,176,0.5)',
-                            interactive: true,
-                    }
-                    break;
-                case 'R_08':
-                    return {
-                        pane: 'pane_2977J_200_flatwork_19',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 1,
-                            fillColor: 'rgba(226,174,18,0.5)',
-                            interactive: true,
-                    }
-                    break;
-                case 'R_10':
-                    return {
-                        pane: 'pane_2977J_200_flatwork_19',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 1,
-                            fillColor: 'rgba(33,146,227,0.5)',
-                            interactive: true,
-                    }
-                    break;
-                case 'R_11':
-                    return {
-                        pane: 'pane_2977J_200_flatwork_19',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 1,
-                            fillColor: 'rgba(211,31,14,0.5)',
-                            interactive: true,
-                    }
-                    break;
-                case 'R_12':
-                    return {
-                        pane: 'pane_2977J_200_flatwork_19',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 1,
-                            fillColor: 'rgba(89,226,101,0.5)',
-                            interactive: true,
-                    }
-                    break;
-                default:
-                    return {
-                        pane: 'pane_2977J_200_flatwork_19',
-                            opacity: 1,
-                            color: 'rgba(35,35,35,1.0)',
-                            dashArray: '',
-                            lineCap: 'butt',
-                            lineJoin: 'miter',
-                            weight: 1.0,
-                            fill: true,
-                            fillOpacity: 1,
-                            fillColor: 'rgba(0,0,0,0.5)',
-                            interactive: true,
-                    }
-                    break;
-            }
-        }
-        map.createPane('pane_2977J_200_flatwork_19');
-        map.getPane('pane_2977J_200_flatwork_19').style.zIndex = 419;
-        map.getPane('pane_2977J_200_flatwork_19').style['mix-blend-mode'] = 'normal';
-        var layer_2977J_200_flatwork_19 = new L.geoJson(json_2977J_200_flatwork_19, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_2977J_200_flatwork_19',
-            layerName: 'layer_2977J_200_flatwork_19',
-            pane: 'pane_2977J_200_flatwork_19',
-            onEachFeature: pop_up_creator_for_domain,
-            style: style_2977J_200_flatwork_19_0,
-        });
-
-        bounds_group.addLayer(layer_2977J_200_flatwork_19);
-
         //var baseMaps = {};
         
-//        L.control.layers(baseMaps, {
-//            '<strong>Sewer Mains</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_InstallN12VCP1.png" /></td><td>Install (N) 12" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN12VCP2.png" /></td><td>Replace (E) with (N) 12" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN18VCP3.png" /></td><td>Replace (E) with (N) 18" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN21VCP4.png" /></td><td>Replace (E) with (N) 21" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_InstallN24VCP5.png" /></td><td>Install (N) 24" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_101_SW_mains_20_ReplaceEwithN24VCP6.png" /></td><td>Replace (E) with (N) 24" VCP</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_101_SW_mains_20,
-//            '<strong>Sewer Manholes</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_InstallNperSFPWSTDPlan871811.png" /></td><td>Install (N) per SFPW STD Plan 87,181</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_ReplaceEwithNperSFPWSTDPlan871812.png" /></td><td>Replace (E) with (N) per SFPW STD Plan 87,181</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_InstallNperSFPWSTDPlan871823.png" /></td><td>Install (N) per SFPW STD Plan 87,182</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_InstallNAngledperSFPWSTDPlan871824.png" /></td><td>Install (N) Angled per SFPW STD Plan 87,182</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_103_SW_manholes_23_RemoveE5.png" /></td><td>Remove (E)</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_103_SW_manholes_23,
-//            '<strong>Sewer Culverts</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_InstallN10VCP1.png" /></td><td>Install (N) 10" VCP</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_ReplaceEifDirected2.png" /></td><td>Replace (E) if Directed</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_102_SW_culverts_21_PlugandFillE3.png" /></td><td>Plug and Fill (E)</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_102_SW_culverts_21,
-//            '<strong>Catch Basins</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_104_SW_drains_24_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_104_SW_drains_24_InstallNperSFPWSTDPlan871881.png" /></td><td>Install (N) per SFPW STD Plan 87,188</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_104_SW_drains_24,
-//            '<strong>Sewer Laterals</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_105_SW_laterals_22_EtoRemain0.png" /></td><td>(E) to Remain</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_105_SW_laterals_22_InstallNperSFPWSTD871961.png" /></td><td>Install (N) per SFPW STD 87,196</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_105_SW_laterals_22_ReplaceEifDirected2.png" /></td><td>Replace (E) if Directed</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_105_SW_laterals_22,
-//            '<strong>Flatwork</strong><br><table><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R040.png" /></td><td>R-3/4: Grinding and Paving</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R051.png" /></td><td>R-5: 8in Concrete Base</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R062.png" /></td><td>R-6: 10in Concrete Base</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R073.png" /></td><td>R-7: Concrete Pavement, Gutter or Parking Strip</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R084.png" /></td><td>R-8: 3.5in Sidewalk</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R105.png" /></td><td>R-10: 6in Wide Concrete Curb</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R116.png" /></td><td>R-11: Combined Curb and Gutter</td></tr><tr><td style="text-align: center;"><img src="legend/2977J_200_flatwork_19_R127.png" /></td><td>R-12: Concrete Curb Ramp</td></tr><tr><td colspan="2">&nbsp;</td></tr></table>': layer_2977J_200_flatwork_19,
-            //"OSM Standard": layer_OSMStandard_0,
-//        }).addTo(map);
         setBounds();
         L.ImageOverlay.include({
             getBounds: function() {
@@ -449,6 +293,9 @@
     <script src="js/layer_toggle/add_point_layer_SW_MH.js"></script>    
     <script src="js/layer_toggle/add_point_layer_SW_drain.js"></script>      
     <script src="js/layer_toggle/add_polygon_layer_flatwork.js"></script>      
+    <script src="js/layer_toggle/add_point_layer_flatwork.js"></script>      
+
+
         
     <script>
         function handleChange(checkbox, layer) {

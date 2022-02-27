@@ -60,6 +60,20 @@ function SW_clvt_layer_styler(feature) {
             return {
                 pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
                     opacity: 1,
+                    color: 'rgba(150, 150, 150, 1.0)',
+                    dashArray: '',
+                    lineCap: 'round',
+                    lineJoin: 'round',
+                    weight: 4.0,
+                    fillOpacity: 0,
+                    interactive: true,
+            }
+            break;
+
+        case 'Scoped, Pre-Construction':
+            return {
+                pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
+                    opacity: 1,
                     color: feature.rgba_code_stored_in_each_feature,
                     dashArray: '',
                     lineCap: 'round',
@@ -85,13 +99,25 @@ function SW_clvt_layer_styler(feature) {
             }
             break;
 
-
-
-        case 'Scoped, Pre-Construction':
+        case 'Televised, Replacement Directed':
             return {
                 pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
                     opacity: 1,
                     color: feature.rgba_code_stored_in_each_feature,
+                    dashArray: '',
+                    lineCap: 'round',
+                    lineJoin: 'round',
+                    weight: 4.0,
+                    fillOpacity: 0,
+                    interactive: true,
+            }
+            break;
+
+        case 'Televised, No Replacement Directed':
+            return {
+                pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
+                    opacity: 1,
+                    color: 'rgba(180, 150, 50, 1.0)',
                     dashArray: '',
                     lineCap: 'round',
                     lineJoin: 'round',

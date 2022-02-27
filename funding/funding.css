@@ -1,0 +1,170 @@
+/* .funding_page {
+
+    overflow-y: scroll;
+    position: absolute;
+    top: 9%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    float: left;
+
+} */
+
+.funding_table {
+
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 9px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+.funding_tdh, .funding_tdhh, .funding_bid_item {
+
+  text-align:center;
+  border: 1px solid black;
+  padding:5px;
+  
+}
+
+.funding_bid_item {
+
+  border: 1px solid black;
+  background-color:white;
+  border-collapse: collapse; 
+  position: sticky;
+  top: 4.5em;
+  width:4%;
+
+}
+
+
+.funding_th{
+
+  border: 1px solid black;
+  color:white;
+  text-align:center;
+  background:grey;
+
+}
+
+
+
+  .funding_thead, .funding_th {
+
+  border: 1px solid black;
+  border-collapse: collapse; 
+  position: sticky;
+  top: 0;
+
+}
+
+  .funding_tdh {
+  
+  border: 1px solid black;
+  border-collapse: collapse; 
+  position: sticky;
+  top: 1.8em;
+
+
+}
+
+  .funding_tdhh {
+
+  border: 1px solid black;
+  background-color:white;
+  border-collapse: collapse; 
+  position: sticky;
+  top: 4.5em;
+
+}
+
+
+.funding_tdh, .funding_tdhh{
+
+  text-align:center;
+  
+}
+
+.funding_tdhh{
+
+  border: 1px solid black;
+  text-align:center;
+  font-weight: bold;
+  
+}
+
+
+.funding_td{
+
+  border: 1px solid black;
+  text-align:center;
+  
+}
+
+.funding_pp_amt{
+
+  background-color:#f29779;
+  
+}
+
+.funding_td_amt{
+
+  background-color:#fa6428;
+  
+}
+
+.funding_pp_amt_SFPW-ESH{
+
+  background-color:#ffdf60;
+  
+}
+
+.funding_td_amt_SFPW-ESH{
+
+  background-color:#ffb760;
+  
+}
+
+
+.funding_pp_amt_SFPW-ESH{
+
+  background-color:#ffdf60;
+  
+}
+
+.funding_td_amt_SFPW-ESH{
+
+  background-color:#ffb760;
+  
+}
+
+.funding_pp_amt_SFPUC-SW{
+
+  background-color:#bdffa5;
+  
+}
+
+.funding_td_amt_SFPUC-SW{
+
+  background-color:#5dc740;
+  
+}
+
+
+.funding_qty {
+
+ width:8vw;
+
+}
+
+.funding_amt {
+
+ width:9vw;
+
+}
+
+

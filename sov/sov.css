@@ -1,0 +1,61 @@
+/* .sov_page {
+
+    overflow-y: scroll;
+    position: absolute;
+    top: 9%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    float: left;
+
+} */
+
+.sov_table {
+
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 9px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+
+.sov_tr {
+
+  border: 1px solid black;
+
+}
+
+
+.sov_td   {
+
+  border: 1px solid black;
+  padding:5px;
+  
+}
+
+.sov_th {
+
+  border: 1px solid black;
+  color:white;
+  text-align:center;
+  position: sticky;
+  top: 0;
+  background:grey;
+
+}
+
+.sov_qty {
+
+ width:5vw;
+
+}
+
+.sov_amt {
+
+ width:10vw;
+
+}

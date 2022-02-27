@@ -122,6 +122,12 @@ function unpack_flatwork_feature_description(property_filters)
 
             output_L_desc = '3 1/2-Inch Thick Concrete Sidewalk';
 
+        } else if (property_filters == 'R-9')
+
+        {
+
+            output_L_desc = '4-Inch Wide Concrete Curb';
+
         } else if (property_filters == 'R-10')
 
         {
@@ -139,6 +145,12 @@ function unpack_flatwork_feature_description(property_filters)
         {
 
             output_L_desc = 'Concrete Curb Ramp with Concrete Detectable Surface Tiles';
+
+        } else if (property_filters == 'R-15')
+
+        {
+
+            output_L_desc = 'Pullbox Type III';
 
         } 
 

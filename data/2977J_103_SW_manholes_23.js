@@ -6,7 +6,7 @@ var json_2977J_103_SW_manholes_23 = {
 
 // Sheet SW-1
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_001", "SCOPE": "Install (N) Angled per SFPW STD Plan 87,182", "STATUS": "Pre-Construction", "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-11900", "NODE_ID": "29,001" }, "geometry": { "type": "Point", "coordinates": [ -122.402084018350592, 37.723921330042913 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_001", "SCOPE": "Install (N) Angled per SFPW STD Plan 87,182", "STATUS": "Post-Construction", "PP_HISTORY": {'SW-04': {'PP01': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-418014", "NODE_ID": "321,373" }, "geometry": { "type": "Point", "coordinates": [ -122.402084018350592, 37.723921330042913 ] } },
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_002", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction", "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-406060", "NODE_ID": "309,527" }, "geometry": { "type": "Point", "coordinates": [ -122.401592551422823, 37.723804724259125 ] } },
 
@@ -61,7 +61,7 @@ var json_2977J_103_SW_manholes_23 = {
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_04_003", "SCOPE": "(E) to Remain", "STATUS": "No Construction", "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-27931", "NODE_ID": "97,923" }, "geometry": { "type": "Point", "coordinates": [ -122.407546139959578, 37.723925700135752 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_04_004", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction", "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-414524", "NODE_ID": "317,030" }, "geometry": { "type": "Point", "coordinates": [ -122.407594734992514, 37.724040602543653 ] } }
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_04_004", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": "Post-Construction", "PP_HISTORY": {'SW-03': {'PP01': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-414524", "NODE_ID": "317,030" }, "geometry": { "type": "Point", "coordinates": [ -122.407594734992514, 37.724040602543653 ] } }
 
 
 ]

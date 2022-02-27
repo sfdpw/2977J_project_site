@@ -1,0 +1,183 @@
+        function style_2977J_200_flatwork_19_0(feature) {
+            switch (String(feature.properties.INST_ID.substring(0, 4))) {
+                case 'R_04':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(106,97,209,0.5)',
+                            interactive: true,
+                    }
+                    break;
+                case 'R_05':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(146,214,49,0.5)',
+                            interactive: true,
+                    }
+                    break;
+                case 'R_06':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(184,19,239,0.5)',
+                            interactive: true,
+                    }
+                    break;
+                case 'R_07':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(35,222,176,0.5)',
+                            interactive: true,
+                    }
+                    break;
+                case 'R_08':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(226,174,18,0.5)',
+                            interactive: true,
+                    }
+                    break;
+                case 'R_09':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(179, 54, 0,0.5)',
+                            interactive: true,
+                    }
+                    break;                    
+                case 'R_10':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(33,146,227,0.5)',
+                            interactive: true,
+                    }
+                    break;
+                case 'R_11':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(211,31,14,0.5)',
+                            interactive: true,
+                    }
+                    break;
+                case 'R_12':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(89,226,101,0.5)',
+                            interactive: true,
+                    }
+                    break;
+                case 'R_15':
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(89,226,101,0.5)',
+                            interactive: true,
+                    }
+                    break;     
+                default:
+                    return {
+                        pane: 'pane_2977J_200_flatwork_19',
+                            opacity: 1,
+                            color: 'rgba(35,35,35,1.0)',
+                            dashArray: '',
+                            lineCap: 'butt',
+                            lineJoin: 'miter',
+                            weight: 1.0,
+                            fill: true,
+                            fillOpacity: 1,
+                            fillColor: 'rgba(0,0,0,0.5)',
+                            interactive: true,
+                    }
+                    break;
+            }
+        }
+        map.createPane('pane_2977J_200_flatwork_19');
+        map.getPane('pane_2977J_200_flatwork_19').style.zIndex = 419;
+        map.getPane('pane_2977J_200_flatwork_19').style['mix-blend-mode'] = 'normal';
+        var layer_2977J_200_flatwork_19 = new L.geoJson(json_2977J_200_flatwork_19, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_2977J_200_flatwork_19',
+            layerName: 'layer_2977J_200_flatwork_19',
+            pane: 'pane_2977J_200_flatwork_19',
+            onEachFeature: pop_up_creator_for_domain,
+            style: style_2977J_200_flatwork_19_0,
+        });
+
+        bounds_group.addLayer(layer_2977J_200_flatwork_19);

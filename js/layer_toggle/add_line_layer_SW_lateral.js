@@ -85,21 +85,6 @@ function SW_lateral_layer_styler(feature) {
             }
             break;
 
-
-        case 'Pending Pre-Construction Television':
-            return {
-                pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
-                    opacity: 1,
-                    color: feature.rgba_code_stored_in_each_feature,
-                    dashArray: dash_code,
-                    lineCap: 'round',
-                    lineJoin: 'round',
-                    weight: 4.0,
-                    fillOpacity: 0,
-                    interactive: true,
-            }
-            break;
-
         case 'Direction Pending Response to Pre-Construction Video':
             return {
                 pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
@@ -114,6 +99,34 @@ function SW_lateral_layer_styler(feature) {
             }
             break;
 
+        case 'Televised, Replacement Directed':
+            return {
+                pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
+                    opacity: 1,
+                    color: feature.rgba_code_stored_in_each_feature,
+                    dashArray: '',
+                    lineCap: 'round',
+                    lineJoin: 'round',
+                    weight: 4.0,
+                    fillOpacity: 0,
+                    interactive: true,
+            }
+            break;
+            
+        case 'Televised, No Replacement Directed':
+            return {
+                pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
+                    opacity: 1,
+                    color: 'rgba(180, 150, 50, 1.0)',
+                    dashArray: '',
+                    lineCap: 'round',
+                    lineJoin: 'round',
+                    weight: 4.0,
+                    fillOpacity: 0,
+                    interactive: true,
+            }
+            break;
+            
         case 'Post-Construction':
             return {
                 pane: 'P_'.concat(feature.L_index_stored_in_each_feature),
