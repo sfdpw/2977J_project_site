@@ -197,7 +197,6 @@ function generate_funding_table(pp_no) {
                <td class="funding_td">' + amount_cell(period_total_amount_puc_sw) + '</td>\
                <td class="funding_td"></td>\
                <td class="funding_td">' + amount_cell(to_date_total_amount_puc_sw) + '</td>\
-               <td class="funding_td"></td>\
              </tr>\
            </tbody>\
          </table><br>';
