@@ -89,7 +89,7 @@ function generate_funding_table(pp_no) {
 	  <tr class="funding_tr">\
 	    <th class="funding_th"></th>\
 	    <th class="funding_th" colspan="4">Totals</th>\
-	    <th class="funding_th" colspan="4">SFPW-ESH</th>\
+	    <th class="funding_th" colspan="4">SFPW - ESH</th>\
 	    <th class="funding_th" colspan="4">SFPUC - SW</th>\
 	  </tr>\
 	</thead>\

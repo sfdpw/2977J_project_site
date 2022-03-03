@@ -1,0 +1,65 @@
+/* .qty_page {
+
+    overflow-y: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+
+} */
+
+
+.qty_table {
+
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 9px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+
+ 
+}
+
+.qty_td, .qty_tdh {
+
+  border: 1px solid black;
+  border-collapse: collapse; 
+  text-align: center;   
+  
+}
+
+
+.qty_thead{
+
+  border: 1px solid black;
+  border-collapse: collapse; 
+  color:white;
+  background:grey;
+
+
+}
+
+  .qty_thead, .qty_th {
+
+  position: sticky;
+  top: 0;
+
+}
+
+  .qty_tdh {
+  
+
+  position: sticky;
+  top: 1.8em;
+
+
+}
+
+
+
+
+
+
+
