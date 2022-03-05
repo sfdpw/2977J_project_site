@@ -1,11 +1,9 @@
-function qty_table_generator_MHs(qty_bid_item) {
+function qty_table_generator_sw_culverts(qty_bid_item) {
 
     var NN = 0; // bid item index
 
     while (base_sov[NN]['Bid Item'] != qty_bid_item.replace('-0','-')) {
-
         NN++;
-
     }
 
     var unit_price = base_sov[NN]['Unit Price'];
@@ -16,19 +14,14 @@ function qty_table_generator_MHs(qty_bid_item) {
         
                  '<thead class="qty_thead">\
                     <tr class="qty_tr">\
-                        <th class="qty_thead" rowspan="2" style="text-align:left; padding:5px">Asset ID</th>\
-                        <th class="qty_thead" rowspan="2" style="text-align:left; padding:5px">Node ID</th>\
+                        <th class="qty_thead" rowspan="2" style="text-align:left; padding:5px;">Location</th>\
+                        <th class="qty_thead" rowspan="2" style="text-align:left; padding:5px; width: 13vw;">Scope Details</th>\
+                        <th class="qty_thead" rowspan="2" style="text-align:center; padding:5px; width: 13vw;">Asset ID</th>\
                         <th class="qty_thead" colspan="2" style="text-align:center">Total</th>\
-                        <th class="qty_thead" colspan="2" style="text-align:center">SFMTA</th>\
+                        <th class="qty_thead" colspan="2" style="text-align:center">SFPW - ESH</th>\
                         <th class="qty_thead" colspan="2" style="text-align:center">SFPUC - SW</th>\
-                        <th class="qty_thead" colspan="2" style="text-align:center">SFPUC - AWSS</th>\
-                        <th class="qty_thead" colspan="2" style="text-align:center">SFPUC - WD</th>\
                     </tr>\
                     <tr class="qty_tr">\
-                        <td class="qty_tdh">QTY</td>\
-                        <td class="qty_tdh">AMT</td>\
-                        <td class="qty_tdh">QTY</td>\
-                        <td class="qty_tdh">AMT</td>\
                         <td class="qty_tdh">QTY</td>\
                         <td class="qty_tdh">AMT</td>\
                         <td class="qty_tdh">QTY</td>\
@@ -44,9 +37,9 @@ function qty_table_generator_MHs(qty_bid_item) {
     var ff = 0;
     var is_qty_in_pp = false;
     var payment_block = '';
-    var MH_extracted_details = [];
-    var MH_properties = [];
-    var MH_coordinates = [];
+    var sw_culvert_extracted_details = [];
+    var sw_culvert_properties = [];
+    var sw_culvert_coordinates = [];
 
 
     var period_totals = [];
@@ -61,64 +54,62 @@ function qty_table_generator_MHs(qty_bid_item) {
         period_totals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
-        for (const manhole of json_201_MHs_5["features"])
+        for (const sw_culvert of json_2977J_102_SW_culverts_21["features"])
 
         {
 
-            MH_properties = manhole["properties"];
-            MH_coordinates = manhole["geometry"]["coordinates"];
-            MH_extracted_details = ['', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            sw_culvert_properties = sw_culvert["properties"];
+            sw_culvert_coordinates = sw_culvert["geometry"]["coordinates"];
+            sw_culvert_extracted_details = ['', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
-            if (MH_properties["PP_HISTORY"].hasOwnProperty(qty_bid_item))
+            if (sw_culvert_properties["PP_HISTORY"].hasOwnProperty(qty_bid_item))
 
             {
 
 
-                if (MH_properties["PP_HISTORY"][qty_bid_item].hasOwnProperty('PP' + zeroPad(pp, 2)))
+                if (sw_culvert_properties["PP_HISTORY"][qty_bid_item].hasOwnProperty('PP' + zeroPad(pp, 2)))
 
 
                 {
 
                     is_qty_in_pp = true;
 
-                    MH_extracted_details[0] =
+                    sw_culvert_extracted_details[0] =
                     "<a href=\"..\\index.html#20/" + 
-                    MH_coordinates[1] +"/" + 
-                    MH_coordinates[0] +                     
+                    sw_culvert_coordinates[0][0][1] +"/" + 
+                    sw_culvert_coordinates[0][0][0] +                     
                     "\" target=\"_blank\">" +
-                    MH_properties["MAXIMO_ID"];
-                    
-                    
-                    MH_extracted_details[1] = MH_properties["NODE_ID"];
-                    //MH_extracted_details[2] = "Stop"; //sw_main_coordinates[0][-1];
+                    sw_culvert_properties['MXASSETNUM'];
+                    sw_culvert_extracted_details[1] = sw_culvert_properties['LOCATION'];
+                    sw_culvert_extracted_details[2] = sw_culvert_properties['SCOPE'];
 
                     for (ff = 0; ff < funds.length; ff++)
 
                     {
 
 
-                        if (MH_properties["PP_HISTORY"][qty_bid_item]
+                        if (sw_culvert_properties["PP_HISTORY"][qty_bid_item]
                             ['PP' + zeroPad(pp, 2)].hasOwnProperty(funds[ff]))
 
                         {
 
-                            MH_extracted_details[2 * ff + 5] = MH_properties["PP_HISTORY"]
+                            sw_culvert_extracted_details[2 * ff + 5] = sw_culvert_properties["PP_HISTORY"]
                                 [qty_bid_item]['PP' + zeroPad(pp, 2)]
                                 [funds[ff]]["QTY"];
 
-                            MH_extracted_details[2 * ff + 6] =
-                                MH_extracted_details[2 * ff + 5] * unit_price;
+                            sw_culvert_extracted_details[2 * ff + 6] =
+                                sw_culvert_extracted_details[2 * ff + 5] * unit_price;
 
 
-                            MH_extracted_details[3] += MH_extracted_details[2 * ff + 5];
-                            MH_extracted_details[4] += MH_extracted_details[2 * ff + 6];
+                            sw_culvert_extracted_details[3] += sw_culvert_extracted_details[2 * ff + 5];
+                            sw_culvert_extracted_details[4] += sw_culvert_extracted_details[2 * ff + 6];
 
 
-                            period_totals[0] += MH_extracted_details[2 * ff + 5];
-                            period_totals[1] += MH_extracted_details[2 * ff + 6];
-                            period_totals[2 * ff + 2] += MH_extracted_details[2 * ff + 5];
-                            period_totals[2 * ff + 3] += MH_extracted_details[2 * ff + 6];
+                            period_totals[0] += sw_culvert_extracted_details[2 * ff + 5];
+                            period_totals[1] += sw_culvert_extracted_details[2 * ff + 6];
+                            period_totals[2 * ff + 2] += sw_culvert_extracted_details[2 * ff + 5];
+                            period_totals[2 * ff + 3] += sw_culvert_extracted_details[2 * ff + 6];
 
                         }
 
@@ -128,13 +119,15 @@ function qty_table_generator_MHs(qty_bid_item) {
 
                         '<tr class="qty_tr">\
                         <td class="qty_td" style="text-align:left; padding:5px">' +
-                        MH_extracted_details[0] + '</td>\
+                        sw_culvert_extracted_details[1] + '</td>\
                         <td class="qty_td" style="text-align:left; padding:5px">' +
-                        MH_extracted_details[1] + '</td>\
+                        sw_culvert_extracted_details[2] + '</td>\
+                        <td class="qty_td" style="text-align:center; padding:5px">' +
+                        sw_culvert_extracted_details[0] + '</td>\
                         <td class="qty_td" style="text-align:right; padding:5px">' +
-                        qty_or_blank(MH_extracted_details[3], base_sov[NN]['Unit']) + '</td>\
+                        qty_or_blank(sw_culvert_extracted_details[3], base_sov[NN]['Unit']) + '</td>\
                         <td class="qty_td funding_td_amt" style="text-padding:5px">' +
-                        amount_or_blank(MH_extracted_details[4]) + '</td>';
+                        amount_or_blank(sw_culvert_extracted_details[4]) + '</td>';
 
 
                     for (ff = 0; ff < funds.length; ff++)
@@ -144,9 +137,9 @@ function qty_table_generator_MHs(qty_bid_item) {
                         payment_block +=
 
                             '<td class="qty_td" style="text-align:right; padding:5px">' +
-                            qty_or_blank(MH_extracted_details[2 * ff + 5], base_sov[NN]['Unit']) + '</td>\
+                            qty_or_blank(sw_culvert_extracted_details[2 * ff + 5], base_sov[NN]['Unit']) + '</td>\
                                      <td class="qty_td funding_td_amt_' + funds[ff] + '" style="padding:5px">' +
-                            amount_or_blank(MH_extracted_details[2 * ff + 6]) + '</td>';
+                            amount_or_blank(sw_culvert_extracted_details[2 * ff + 6]) + '</td>';
 
 
                     }
@@ -167,15 +160,11 @@ function qty_table_generator_MHs(qty_bid_item) {
 
         {
 
-
-
-
             return_block += '<tr class="qty_tr">\
                                           <td style="padding:5px"><strong>Payment Period ' + pp + '</strong></td>\
                                         </tr>' + payment_block +
-                '<tr>\
-                                           <td>\
-                                           </td>\
+                                       '<tr>\
+                                           <td colspan="2">&nbsp;</td>\
                                            <td style="padding:5px; text-align:right">\
                                              <strong>PP ' + pp + ' Totals:</strong>\
                                            </td>\
@@ -200,17 +189,15 @@ function qty_table_generator_MHs(qty_bid_item) {
                 return_block +=
 
                     '<td class="qty_td" style="text-align:right; width:5vw; padding:5px"><strong>' +
-                    fixed_qty_or_blank(period_totals[2 * ff + 2], 2) + '</strong></td>\
+                    qty_or_blank(period_totals[2 * ff + 2], base_sov[NN]['Unit']) + '</strong></td>\
                               <td class="qty_td funding_td_amt_' + funds[ff] +
                     '" style="padding:5px; width:8vw;"><strong>' +
                     amount_or_blank(period_totals[2 * ff + 3]) + '</strong></td>';
 
             }
 
-            return_block += '</tr><tr><td  colspan="11">&nbsp;</td></tr>';
-
-
-
+            return_block += '</tr><tr><td  colspan="9">&nbsp;</td></tr>';
+            
         }
 
           
@@ -222,16 +209,15 @@ function qty_table_generator_MHs(qty_bid_item) {
     
             }
  
- 
     }
     
     return_block +=
     
         '<tr class="qty_tr">\
-          <td colspan="11">&nbsp;</td>\
+          <td colspan="9">&nbsp;</td>\
          </tr>\
          <tr class="qty_tr">\
-          <td></td>\
+          <td colspan="2">&nbsp;</td>\
           <td style="padding:5px; text-align:right"><strong>To Date Totals:</strong></td>\
           <td class="qty_td" style="padding:5px; text-align:right">\
             <strong>' + qty_or_blank(to_date_totals[0], base_sov[NN]['Unit']) + '</strong>\
@@ -240,28 +226,16 @@ function qty_table_generator_MHs(qty_bid_item) {
             <strong>' + amount_or_blank(to_date_totals[1]) + '</strong>\
           </td>\
           <td class="qty_td" style="padding:5px; text-align:right">\
-            <strong>' + fixed_qty_or_blank(to_date_totals[2], 2) + '</strong>\
+            <strong>' + qty_or_blank(to_date_totals[2], base_sov[NN]['Unit']) + '</strong>\
           </td>\
-          <td class="qty_td funding_td_amt_SFMTA" style="padding:5px; text-align:right">\
+          <td class="qty_td funding_td_amt_SFPW-ESH" style="padding:5px; text-align:right">\
             <strong>' + amount_or_blank(to_date_totals[3]) + '</strong>\
           </td>\
           <td class="qty_td" style="padding:5px; text-align:right">\
-            <strong>' + fixed_qty_or_blank(to_date_totals[4], 2) + '</strong>\
+            <strong>' + qty_or_blank(to_date_totals[4], base_sov[NN]['Unit']) + '</strong>\
           </td>\
           <td class="qty_td funding_td_amt_SFPUC-SW" style="padding:5px; text-align:right">\
             <strong>' + amount_or_blank(to_date_totals[5]) + '</strong>\
-          </td>\
-          <td class="qty_td" style="padding:5px; text-align:right">\
-            <strong>' + fixed_qty_or_blank(to_date_totals[6], 2) + '</strong>\
-          </td>\
-          <td class="qty_td funding_td_amt_SFPUC-AWSS" style="padding:5px; text-align:right">\
-            <strong>' + amount_or_blank(to_date_totals[7]) + '</strong>\
-          </td>\
-          <td class="qty_td" style="padding:5px; text-align:right">\
-            <strong>' + fixed_qty_or_blank(to_date_totals[8], 2) + '</strong>\
-          </td>\
-          <td class="qty_td funding_td_amt_SFPUC-WD" style="padding:5px; text-align:right">\
-            <strong>' + amount_or_blank(to_date_totals[9]) + '</strong>\
           </td>\
          </tr><br>';    
 
