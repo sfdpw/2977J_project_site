@@ -126,14 +126,47 @@ function generate_funding_table(pp_no) {
         //   {to_date_total_amount += to_date_funding_details(base_sov[ii]["Bid Item"], pp_no)[1];} 
 
 
-        return_block +=
-            '<tr class="funding_tr">\
-	     <td class="funding_td"\
-	         data-toogle="tooltip"\
-	         title="' + base_sov[ii]["Description"] +
-            ' (' + base_sov[ii]["Unit"] + ')' +
-            '">' + base_sov[ii]["Bid Item"] + '</td>\
-	     <td class="funding_td">' +
+        return_block += '<tr class="funding_tr">';
+        
+        if (base_sov[ii].Worksheet == 1)
+        
+          {
+                    
+           return_block += '<td class="funding_td"\
+                            data-toogle="tooltip" title="' + base_sov[ii]["Description"] +
+                           ' (' + base_sov[ii]["Unit"] + ')"' +
+                           'style="text-align:center; text-decoration: underline;">' +
+                           "<a href=\"..\\qty/" + 'qty_' + base_sov[ii]["Bid Item"].replace('-','-0') + 
+                           ".html\" target=\"_blank\">" + base_sov[ii]["Bid Item"] + "</td>";
+           
+           }
+
+        else if (base_sov[ii].Worksheet == 2)
+        
+          {
+                    
+            return_block += '<td class="funding_td"\
+                             data-toogle="tooltip" title="' + base_sov[ii]["Description"] +
+                            ' (' + base_sov[ii]["Unit"] + ')"' +
+                            'style="text-align:center; text-decoration: underline;">' +
+                            "<a href=\"..\\qty/" + 'qty_' + base_sov[ii]["Bid Item"] + 
+                            ".html\" target=\"_blank\">" + base_sov[ii]["Bid Item"] + "</td>";
+                                  
+           }
+           
+        else
+        
+          {
+          
+           return_block += '<td class="funding_td" data-toogle="tooltip"\
+	                    title="' + base_sov[ii]["Description"] +
+                           ' (' + base_sov[ii]["Unit"] + ')' +
+                           '">' + base_sov[ii]["Bid Item"] + '</td>';
+          
+           } 
+            
+	 return_block +=    
+	   '<td class="funding_td">' +
             period_funding_details(base_sov[ii]["Bid Item"], pp_no)[0] + '</td>\
 	     <td class="funding_td funding_pp_amt">' +
             amount_cell(period_funding_details(base_sov[ii]["Bid Item"], pp_no)[1]) + '</td>\

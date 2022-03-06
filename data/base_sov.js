@@ -3,6 +3,7 @@ var base_sov =
 [
  {
   'Bid Item': 'G-1',
+  'Worksheet': 0,
   'Description': 'ALLOWANCE FOR PARTNERING FACILITATION AND RELATED COSTS',
   'Unit': 'AL',
   'Contract QTY': 1,
@@ -38,6 +39,7 @@ var base_sov =
 
  {
   'Bid Item': 'R-1',
+  'Worksheet': 0,
   'Description': 'TRAFFIC CONTROL FOR ROADWAY WORK',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -73,6 +75,7 @@ var base_sov =
 
  {
   'Bid Item': 'R-2',
+  'Worksheet': 0,
   'Description': 'TEMPORARY RETROFLECTIVE PAVEMENT MARKINGS',
   'Unit': 'LF',
   'Contract QTY': 5000,
@@ -109,6 +112,7 @@ var base_sov =
   
 {
   'Bid Item': 'R-3',
+  'Worksheet': 0,
   'Description': 'FULL DEPTH PLANING PER 2-INCH DEPTH OF CUT',
   'Unit': 'SF',
   'Contract QTY': 228179,
@@ -145,6 +149,7 @@ var base_sov =
    
 {
   'Bid Item': 'R-4',
+  'Worksheet': 0,
   'Description': 'HOT MIX ASPHALT (Type A ½-Inch Maximum with Medium Grading)',
   'Unit': 'TON',
   'Contract QTY': 3241,
@@ -181,6 +186,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-5',
+  'Worksheet': 0,
   'Description': '8-INCH THICK CONCRETE BASE',
   'Unit': 'SF',
   'Contract QTY': 22930,
@@ -217,6 +223,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-6',
+  'Worksheet': 0,
   'Description': '10-INCH THICK CONCRETE BASE',
   'Unit': 'SF',
   'Contract QTY': 75965,
@@ -253,6 +260,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-7',
+  'Worksheet': 0,
   'Description': '8-INCH THICK CONCRETE PAVEMENT, PARKING STRIP, OR GUTTER',
   'Unit': 'SF',
   'Contract QTY': 541,
@@ -289,6 +297,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-8',
+  'Worksheet': 1,
   'Description': '3 ½-INCH THICK CONCRETE SIDEWALK',
   'Unit': 'SF',
   'Contract QTY': 11252,
@@ -299,6 +308,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-9',
+  'Worksheet': 1,
   'Description': '4-INCH WIDE CONCRETE CURB',
   'Unit': 'LF',
   'Contract QTY': 128,
@@ -309,6 +319,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-10',
+  'Worksheet': 2,
   'Description': '6-INCH WIDE CONCRETE CURB',
   'Unit': 'LF',
   'Contract QTY': 130,
@@ -319,6 +330,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-11',
+  'Worksheet': 2,
   'Description': 'COMBINED 6-INCH WIDE CONCRETE CURB AND 2-FOOT WIDE CONCRETE GUTTER',
   'Unit': 'LF',
   'Contract QTY': 1942,
@@ -329,6 +341,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-12',
+  'Worksheet': 2,
   'Description': 'CONCRETE CURB RAMP WITH CONCRETE DETECTABLE SURFACE TILES',
   'Unit': 'EA',
   'Contract QTY': 72,
@@ -340,6 +353,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-13',
+  'Worksheet': 0,
   'Description': 'PEDESTRIAN BARRIER RAILING AND FOOTING',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -376,6 +390,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-14',
+  'Worksheet': 0,
   'Description': 'PULL BOX TYPE I (CONTINGENCY BID ITEM)**',
   'Unit': 'EA',
   'Contract QTY': 10,
@@ -412,6 +427,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-15',
+  'Worksheet': 2,
   'Description': 'PULL BOX TYPE III',
   'Unit': 'EA',
   'Contract QTY': 3,
@@ -423,6 +439,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-16',
+  'Worksheet': 0,
   'Description': 'ADJUST CITY-OWNED MANHOLE FRAME AND COVER AND CATCH BASIN FRAME AND GRATE TO GRADE (CONTINGENCY BID ITEM)** ',
   'Unit': 'EA',
   'Contract QTY': 71,
@@ -459,6 +476,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-17',
+  'Worksheet': 0,
   'Description': 'ADJUST CITY-OWNED HYDRANT AND WATER MAIN VALVE BOX CASTING COVER TO GRADE (CONTINGENCY BID ITEM)**',
   'Unit': 'EA',
   'Contract QTY': 63,
@@ -495,6 +513,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-18',
+  'Worksheet': 0,
   'Description': 'RECONSTRUCT CITY-OWNED HYDRANT AND WATER MAIN VALVE BOX CASTING COVER TO GRADE (CONTINGENCY BID ITEM)**',
   'Unit': 'EA',
   'Contract QTY': 63,
@@ -531,6 +550,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-19',
+  'Worksheet': 0,
   'Description': 'MOBILIZATION FOR PAVING WORK (Maximum 3% of the Sum of Bid Items R-1 through R-18 Above)',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -567,6 +587,7 @@ var base_sov =
 
 {
   'Bid Item': 'R-20',
+  'Worksheet': 0,
   'Description': 'DEMOBILIZATION FOR PAVING WORK (Maximum 2% of the Sum of Bid Items R-1 through R-18 Above)',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -603,6 +624,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-1',
+  'Worksheet': 0,
   'Description': 'TRAFFIC ROUTING FOR SEWER WORK',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -639,6 +661,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-2',
+  'Worksheet': 0,
   'Description': 'TRENCH AND EXCAVATION SUPPORT WORK FOR SEWER WORK',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -675,6 +698,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-3',
+  'Worksheet': 1,
   'Description': 'CONCRETE MANHOLE FOR 12-INCH TO 24-INCH DIAMETER SEWERS WITH FRAME AND COVER (PER SFDPW STANDARD PLAN 87, 181)',
   'Unit': 'EA',
   'Contract QTY': 8,
@@ -685,6 +709,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-4',
+  'Worksheet': 1,
   'Description': 'CONCRETE MANHOLE FOR 27-INCH TO 48-INCH DIAMETER SEWERS WITH FRAME AND COVER (PER SFDPW STANDARD PLAN 87, 182)',
   'Unit': 'EA',
   'Contract QTY': 2,
@@ -696,6 +721,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-5',
+  'Worksheet': 1,
   'Description': '12-INCH DIAMETER VCP SEWER ON CRUSHED ROCK BEDDING',
   'Unit': 'LF',
   'Contract QTY': 95,
@@ -706,6 +732,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-6',
+  'Worksheet': 0,
   'Description': '18-INCH DIAMETER VCP SEWER ON CRUSHED ROCK BEDDING',
   'Unit': 'LF',
   'Contract QTY': 255,
@@ -741,6 +768,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-7',
+  'Worksheet': 0,
   'Description': '21-INCH DIAMETER VCP SEWER ON CRUSHED ROCK BEDDING',
   'Unit': 'LF',
   'Contract QTY': 248,
@@ -777,6 +805,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-8',
+  'Worksheet': 1,
   'Description': '24-INCH DIAMETER VCP SEWER ON CRUSHED ROCK BEDDING',
   'Unit': 'LF',
   'Contract QTY': 401,
@@ -787,6 +816,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-9',
+  'Worksheet': 1,
   'Description': '10-INCH DIAMETER CULVERT(CONTINGENCY BID ITEM)**',
   'Unit': 'LF',
   'Contract QTY': 229,
@@ -797,6 +827,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-10',
+  'Worksheet': 2,
   'Description': 'CONCRETE CATCH BASIN WITHOUT CURB INLET AND WITH NEW FRAME AND GRATING (PER SFDPW STANDARD PLAN 87, 188)',
   'Unit': 'EA',
   'Contract QTY': 8,
@@ -807,6 +838,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-11',
+  'Worksheet': 2,
   'Description': 'TELEVISION INSPECTION OF EXISTING 6-INCH OR 8-INCH DIAMETER SIDE SEWER AND 10-INCH DIAMETER CULVERT LOCATED WITHIN LIMITS OF MAIN SEWER WORK (CONTINGENCY BID ITEM)**',
   'Unit': 'EA',
   'Contract QTY': 10,
@@ -817,6 +849,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-12',
+  'Worksheet': 0,
   'Description': 'TELEVISION INSPECTION OF EXISTING 6-INCH OR 8-INCH DIAMETER SIDE SEWER AND 10-INCH DIAMETER CULVERT LOCATED OUTSIDE THE LIMITS OF MAIN SEWER WORK BUT WITHIN CONTRACT LIMITS (CONTINGENCY BID ITEM)**',
   'Unit': 'EA',
   'Contract QTY': 10,
@@ -853,6 +886,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-13',
+  'Worksheet': 2,
   'Description': '6-INCH OR 8-INCH DIAMETER SIDE SEWER CONNECTION TO VCP MAIN SEWER (CONTINGENCY BID ITEM)**',
   'Unit': 'EA',
   'Contract QTY': 10,
@@ -863,6 +897,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-14',
+  'Worksheet': 0,
   'Description': 'REPLACEMENT OF 6-INCH OR 8-INCH DIAMETER SIDE SEWER LOCATED WITHIN LIMITS OF MAIN SEWER WORK (CONTINGENCY BID ITEM)** ',
   'Unit': 'LF',
   'Contract QTY': 230,
@@ -899,6 +934,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-15',
+  'Worksheet': 0,
   'Description': 'REPLACEMENT OF 6-INCH OR 8-INCH DIAMETER SIDE SEWER LOCATED OUTSIDE THE LIMITS OF MAIN SEWER WORK BUT WITHIN CONTRACT LIMITS (CONTINGENCY BID ITEM)**',
   'Unit': 'LF',
   'Contract QTY': 100,
@@ -935,6 +971,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-16',
+  'Worksheet': 0,
   'Description': 'POST-CONSTRUCTION TELEVISION INSPECTION OF NEWLY CONSTRUCTED MAIN SEWERS',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -971,6 +1008,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-17',
+  'Worksheet': 2,
   'Description': 'POST-CONSTRUCTION TELEVISION INSPECTION OF NEWLY CONSTRUCTED SIDE SEWER AND CULVERTS (CONTINGENCY BID ITEM)**',
   'Unit': 'EA',
   'Contract QTY': 18,
@@ -981,6 +1019,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-18',
+  'Worksheet': 0,
   'Description': 'CAST IRON WATER TRAP FOR CATCH BASIN INCLUDING CLEANOUT CAP (PER SFDPW STANDARD PLAN 87, 194) (CONTINGENCY BID ITEM)** ',
   'Unit': 'EA',
   'Contract QTY': 8,
@@ -1017,6 +1056,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-19',
+  'Worksheet': 0,
   'Description': 'EXPLORATORY HOLES OR POTHOLES (CONTINGENCY BID ITEM)**',
   'Unit': 'CY',
   'Contract QTY': 10,
@@ -1053,6 +1093,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-20',
+  'Worksheet': 0,
   'Description': 'RECONST. PAVEMENT OUTSIDE OF SEWER T-TRENCH AND OUTSIDE OF BASE REP LIMITS SHOWN ON R-DWGS WITH 8-INCH OR 12-INCH CONCRETE BASE (CONTINGENCY BID ITEM)** ',
   'Unit': 'SF',
   'Contract QTY': 1950,
@@ -1089,6 +1130,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-21',
+  'Worksheet': 0,
   'Description': 'CONTROL DENSITY FILL BEDDING MATERIAL FOR SFWD FACILITIES ENCOUNTERED WITHIN THE SEWER TRENCH PRIOR TO BACKFILL (CONTINGENCY BID ITEM)** ',
   'Unit': 'CY',
   'Contract QTY': 3,
@@ -1125,6 +1167,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-22',
+  'Worksheet': 0,
   'Description': 'TRANSPORTATION OF SURPLUS CALIFORNIA CLASS I (NON-RCRA) HAZARDOUS WASTE (SOILS) TO A CLASS I DISPOSAL FACILITY',
   'Unit': 'US SHORT TON',
   'Contract QTY': 300,
@@ -1161,6 +1204,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-23',
+  'Worksheet': 0,
   'Description': 'DISPOSAL OF SURPLUS CALIFORNIA CLASS I (NON-RCRA) HAZARDOUS Waste (SOILS) TO A CLASS I DISPOSAL FACILITY',
   'Unit': 'US SHORT TON',
   'Contract QTY': 300,
@@ -1197,6 +1241,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-24',
+  'Worksheet': 0,
   'Description': 'TRANSPORTATION OF SURPLUS NON-HAZARDOUS SOILS (CLASS II & III) CALIFORNIA DESIGNATED WASTE (SOILS) TO A CLASS II & III DISPOSAL FACILITY',
   'Unit': 'US SHORT TON',
   'Contract QTY': 650,
@@ -1233,6 +1278,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-25',
+  'Worksheet': 0,
   'Description': 'DISPOSAL OF SURPLUS NON-HAZARDOUS SOILS (CLASS II & III) CALIFORNIA Designated WASTE (SOILS) TO A CLASS II & III DISPOSAL FACILITY',
   'Unit': 'US SHORT TON',
   'Contract QTY': 650,
@@ -1269,6 +1315,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-26',
+  'Worksheet': 0,
   'Description': 'MOBILIZATION FOR SEWER AND DRAINAGE WORK (MAXIMUM 3% of the Sum of Bid Items SW-1 through SW-25 Above)',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -1305,6 +1352,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-27',
+  'Worksheet': 0,
   'Description': 'DEMOBILIZATION FOR SEWER AND DRAINAGE WORK (MAXIMUM 2% of the Sum of Bid Items SW-1 through SW-25 Above)',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -1341,6 +1389,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-28',
+  'Worksheet': 0,
   'Description': 'DESIGN OF STRUCTURAL SUPPORT FOR SFWD FACILITIES ENCOUNTERED WITHIN SEWER TRENCH',
   'Unit': 'LS',
   'Contract QTY': 1,
@@ -1377,6 +1426,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-29',
+  'Worksheet': 0,
   'Description': 'ALLOWANCE FOR UNFORSEEN ENVIRONMENTAL CONDITIONS',
   'Unit': 'AL',
   'Contract QTY': 1,
@@ -1413,6 +1463,7 @@ var base_sov =
 
 {
   'Bid Item': 'SW-30',
+  'Worksheet': 0,
   'Description': 'ALLOWANCE TO PERFORM NECESSARY WORK DUE TO UNFORESEEN CONDITIONS RELATED TO SEWER WORK',
   'Unit': 'AL',
   'Contract QTY': 1,

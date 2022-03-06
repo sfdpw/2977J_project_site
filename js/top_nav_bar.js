@@ -116,6 +116,9 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	             <a class="dropdown-item" href="#">Mains &raquo;</a>\
 	             <ul class="submenu dropdown-menu">\
 	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-05.html">SW-05 - (N) 12" VCP SW Main</a>\
+	               </li>\
+	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-08.html">SW-08 - (N) 24" VCP SW Main</a>\
 	               </li>\
 	             </ul>\
