@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+  <head id ="sov_page_head">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>2977J SOV - PP2</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,width=device-width">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/drop_down.css">
+    <script src="../js/drop_down.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <link rel="stylesheet" href="../css/site_styles.css">
+    <link rel="stylesheet" href="sov.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="../legend/2977J_fav.png" />
+    <script src="../js/top_nav_bar.js"></script>   
+    <script src="../js/misc_payment_functions.js"></script>
+    <script src="../data/2977J_200_flatwork_19.js"></script>
+    <script src="../data/2977J_210_flatwork_points_0.js"></script>    
+    <script src="../data/2977J_101_SW_mains_20.js"></script>
+    <script src="../data/2977J_102_SW_culverts_21.js"></script>
+    <script src="../data/2977J_105_SW_laterals_22.js"></script>
+    <script src="../data/2977J_103_SW_manholes_23.js"></script>
+    <script src="../data/2977J_104_SW_drains_24.js"></script>
+    <script src="../data/base_sov.js"></script>    
+    <script src="sov_table_generator.js"></script>      
+</head>
+
+  <body>
+    <div class="grid-parent-other-page">
+      <div class="grid-div-menu-nav-other" id="menu_nav">
+        <script>
+            document.getElementById("menu_nav").innerHTML += top_nav('sov', 2);
+        </script>
+      </div>
+      <div class="grid-div-page-body-other" id="sov_page">
+        <table class="sov_table" id="sov_table">
+          <script>
+            document.getElementById("sov_table").innerHTML += generate_sov_table(2);
+          </script>
+        </table>
+      </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>
+

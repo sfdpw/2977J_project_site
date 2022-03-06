@@ -8,7 +8,7 @@ var json_2977J_103_SW_manholes_23 = {
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_001", "SCOPE": "Install (N) Angled per SFPW STD Plan 87,182", "STATUS": "Post-Construction", 'LOCATION': 'Intersection of Paul Ave and San Bruno Ave', "PP_HISTORY": {'SW-04': {'PP01': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-418014", "NODE_ID": "321,373" }, "geometry": { "type": "Point", "coordinates": [ -122.402084018350592, 37.723921330042913 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_002", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-406060", "NODE_ID": "309,527" }, "geometry": { "type": "Point", "coordinates": [ -122.401592551422823, 37.723804724259125 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_002", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Post-Construction",'LOCATION':'Paul Ave - Midblock between San Bruno Ave and Bayshore Blvd', "PP_HISTORY": {'SW-03': {'PP02': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-406060", "NODE_ID": "309,527" }, "geometry": { "type": "Point", "coordinates": [ -122.401592551422823, 37.723804724259125 ] } },
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_003", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-406061", "NODE_ID": "309,526" }, "geometry": { "type": "Point", "coordinates": [ -122.400930968482569, 37.723647434904741 ] } },
 
@@ -48,9 +48,9 @@ var json_2977J_103_SW_manholes_23 = {
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_03_006", "SCOPE": "(E) to Remain", "STATUS": "No Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-18319", "NODE_ID": "29,021" }, "geometry": { "type": "Point", "coordinates": [ -122.397025193337058, 37.720866866324407 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_03_007", "SCOPE": "Install (N) per SFPW STD Plan 87,182", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-418010", "NODE_ID": "321,368" }, "geometry": { "type": "Point", "coordinates": [ -122.39711432916161, 37.720836718993198 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_03_007", "SCOPE": "Install (N) per SFPW STD Plan 87,182", "STATUS": "Post-Construction",'LOCATION': 'Salinas Ave and Keith St Intersection', "PP_HISTORY": {'SW-04': {'PP02': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-418010", "NODE_ID": "321,368" }, "geometry": { "type": "Point", "coordinates": [ -122.39711432916161, 37.720836718993198 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_03_008", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-418002", "NODE_ID": "321,367" }, "geometry": { "type": "Point", "coordinates": [ -122.397302011205113, 37.720934047319169 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_03_008", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": "Post-Construction",'LOCATION': 'Salinas Ave and Carr St Intersection', "PP_HISTORY": {'SW-03': {'PP02': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-418002", "NODE_ID": "321,367" }, "geometry": { "type": "Point", "coordinates": [ -122.397302011205113, 37.720934047319169 ] } },
 
 
 // Sheet SW-4

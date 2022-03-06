@@ -6,7 +6,7 @@ var json_2977J_105_SW_laterals_22 = {
 
 // Sheet SW-1
 
-{ "type": "Feature", "properties": { "INST_ID": "SSLT_SW_01_001", "SCOPE": "Replace (E) if Directed", "PIPE_DIA": "6\"", "PIPE_MATL": "VCP", "STATUS": "Televised, Replacement Directed", "PP_HISTORY": {}, 'SUBMITTALS':{'TVI_PRE_CON': {'SUBMITTAL': '67', 'VIDEO': '1', 'RESPONSE': 'Replace'}, 'TVI_PST_CON': {'SUBMITTAL':'none', 'VIDEO':'none', 'RESPONSE': 'none'}}, "MXASSETNUM": "L-328465", "BLKLOT": "5467017C", "ADDRESS": "635 Paul Ave" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -122.401667796832299, 37.723750283641039 ], [ -122.401642794515865, 37.723816644978605 ] ] ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SSLT_SW_01_001", "SCOPE": "Replace (E) if Directed", "PIPE_DIA": "6\"", "PIPE_MATL": "VCP", "STATUS": "Televised, Replacement Directed", "PP_HISTORY": {'SW-13': {'PP02': {'SFPUC-SW': {'QTY': 1, 'UNIT': 'EA'}}}}, 'SUBMITTALS':{'TVI_PRE_CON': {'SUBMITTAL': '67', 'VIDEO': '1', 'RESPONSE': 'Replace'}, 'TVI_PST_CON': {'SUBMITTAL':'none', 'VIDEO':'none', 'RESPONSE': 'none'}}, "MXASSETNUM": "L-328465", "BLKLOT": "5467017C", "ADDRESS": "635 Paul Ave" }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ -122.401667796832299, 37.723750283641039 ], [ -122.401642794515865, 37.723816644978605 ] ] ] } },
 
 
 // Sheet SW-2

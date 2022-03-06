@@ -49,6 +49,7 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	         <ul class="submenu dropdown-menu">\
 	           <li>\
 		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP01.html">PP01 - Jan 2022</a>\
+		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP02.html">PP02 - Feb 2022</a>\
 	           </li>\
 	         </ul>\
 	       </li>\
@@ -57,6 +58,7 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	         <ul class="submenu dropdown-menu">\
 	           <li>\
 	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP01.html">PP01 - Jan 2022</a>\
+	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP02.html">PP02 - Feb 2022</a>\
 	           </li>\
 	         </ul>\
 	       </li>\
@@ -76,6 +78,9 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	               </li>\
 	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-09.html">R-09: 4in Curb</a>\
+	               </li>\
+	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-10.html">R-10: 6in Curb</a>\
 	               </li>\
 	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-11.html">R-11: Combined Curb and Gutter</a>\

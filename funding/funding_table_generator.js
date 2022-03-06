@@ -17,19 +17,11 @@ function period_funding_details(bid_item_id, pp_no) {
         return_array[9] = base_sov[NN]['Payment History']['SFPUC-SW']["PP" + zeroPad(pp_no, 2)];
         return_array[8] = format_unit(return_array[9] / base_sov[NN]['Unit Price'], base_sov[NN]['Unit'], 2);
         
-        //return_array[13] = base_sov[NN]['Payment History']["SFPUC-AWSS"]["PP" + zeroPad(pp_no, 2)];
-        //return_array[12] = format_unit(return_array[13] / base_sov[NN]['Unit Price'], base_sov[NN]['Unit'], 2);
-
-        //return_array[17] = base_sov[NN]['Payment History']["SFPUC-WD"]["PP" + zeroPad(pp_no, 2)];
-        //return_array[16] = format_unit(return_array[17] / base_sov[NN]['Unit Price'], base_sov[NN]['Unit'], 2);
-
-        return_array[1] = (return_array[5] + return_array[9]); // + return_array[13] + return_array[17])
+        return_array[1] = (return_array[5] + return_array[9]);
         return_array[0] = format_unit(return_array[1] / base_sov[NN]['Unit Price'], base_sov[NN]['Unit']);
 
         return_array[7] = 0;
         return_array[11] = 0;
-        return_array[15] = 0;
-        return_array[19] = 0;
 
         for (var pp = 1; pp < pp_no + 1; pp++)
 
@@ -39,15 +31,10 @@ function period_funding_details(bid_item_id, pp_no) {
             return_array[6] = format_unit(return_array[7] / base_sov[NN]['Unit Price'], base_sov[NN]['Unit'], 2);
             return_array[11] += base_sov[NN]['Payment History']['SFPUC-SW']["PP" + zeroPad(pp, 2)];
             return_array[10] = format_unit(return_array[11] / base_sov[NN]['Unit Price'], base_sov[NN]['Unit'], 2);
-            //return_array[15] += base_sov[NN]['Payment History']["SFPUC-AWSS"]["PP" + zeroPad(pp, 2)];
-            //return_array[14] = format_unit(return_array[15] / base_sov[NN]['Unit Price'], base_sov[NN]['Unit'], 2);
-            //return_array[19] += base_sov[NN]['Payment History']["SFPUC-WD"]["PP" + zeroPad(pp, 2)];
-            //return_array[18] = format_unit(return_array[19] / base_sov[NN]['Unit Price'], base_sov[NN]['Unit'], 2);
-
+            
         }
 
-        return_array[3] = return_array[7] + return_array[11] +
-            return_array[15] + return_array[19];
+        return_array[3] = return_array[7] + return_array[11];
 
         return_array[2] = format_unit(return_array[3] / base_sov[NN]['Unit Price'], base_sov[NN]['Unit']);
 
@@ -62,10 +49,7 @@ function period_funding_details(bid_item_id, pp_no) {
 
     return return_array
 
-
 }
-
-
 
 
 function generate_funding_table(pp_no) {
@@ -77,11 +61,7 @@ function generate_funding_table(pp_no) {
     var to_date_total_amount_sfpw_esh = 0;
     var period_total_amount_puc_sw = 0;
     var to_date_total_amount_puc_sw = 0;
-    //var period_total_amount_puc_awss = 0;
-    //var to_date_total_amount_puc_awss = 0;
-    //var period_total_amount_puc_wd = 0;
-    //var to_date_total_amount_puc_wd = 0;
-
+    
     var return_block =
 
         '<table class="funding_table">\
@@ -123,9 +103,13 @@ function generate_funding_table(pp_no) {
 
     {
 
+   //console.log(base_sov[ii]["Bid Item"], Math.abs(parseFloat(period_funding_details(base_sov[ii]["Bid Item"], pp_no)[1])));
+   //console.log(base_sov[ii]["Bid Item"], Math.abs(parseFloat(period_funding_details(base_sov[ii]["Bid Item"], pp_no)[3])));
 
-        if (Math.abs(parseFloat(period_funding_details(base_sov[ii]["Bid Item"], pp_no)[3])) > 0)
 
+        if (Math.abs(parseFloat(period_funding_details(base_sov[ii]["Bid Item"], pp_no)[3])) > 0 ||
+            Math.abs(parseFloat(period_funding_details(base_sov[ii]["Bid Item"], pp_no)[1])) > 0 )
+                                                           
         {
          
          period_total_amount += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[1];
@@ -133,11 +117,7 @@ function generate_funding_table(pp_no) {
          period_total_amount_sfpw_esh += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[5];
          to_date_total_amount_sfpw_esh += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[7];   
          period_total_amount_puc_sw += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[9];  
-         to_date_total_amount_puc_sw += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[11];  
-         //period_total_amount_puc_awss += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[13];  
-         //to_date_total_amount_puc_awss += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[15];  
-         //period_total_amount_puc_wd += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[17];  
-         //to_date_total_amount_puc_wd += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[19];   
+         to_date_total_amount_puc_sw += period_funding_details(base_sov[ii]["Bid Item"], pp_no)[11];   
                     
         } 
 

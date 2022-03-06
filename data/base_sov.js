@@ -45,7 +45,7 @@ var base_sov =
   'Payment History': {
                    'SFPW-ESH': {
                                 'PP01':2760,
-                                'PP02':0.00,
+                                'PP02':6900,
                                 'PP03':0.00,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
@@ -313,33 +313,7 @@ var base_sov =
   'Unit': 'LF',
   'Contract QTY': 130,
   'Unit Price': 60,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
-  
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_200_flatwork_19'], 'R-10', 60)
   },
 
 
@@ -636,7 +610,7 @@ var base_sov =
   'Payment History': {
                    'SFPW-ESH': {
                                 'PP01':1248,
-                                'PP02':0.00,
+                                'PP02':1644.5,
                                 'PP03':0.00,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
@@ -648,7 +622,7 @@ var base_sov =
                                 },
                    'SFPUC-SW': {            
                                 'PP01':11232,
-                                'PP02':0.00,
+                                'PP02':14800.5,
                                 'PP03':0.00,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
@@ -672,7 +646,7 @@ var base_sov =
   'Payment History': {
                    'SFPW-ESH': {
                                 'PP01':2688,
-                                'PP02':0.00,
+                                'PP02':3542,
                                 'PP03':0.00,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
@@ -684,7 +658,7 @@ var base_sov =
                                 },
                    'SFPUC-SW': {            
                                 'PP01':24192,
-                                'PP02':0.00,
+                                'PP02':31878,
                                 'PP03':0.00,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
@@ -726,33 +700,7 @@ var base_sov =
   'Unit': 'LF',
   'Contract QTY': 95,
   'Unit Price': 350,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
-  
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_101_SW_mains_20'], 'SW-05', 350)                        
   },
 
 
@@ -909,33 +857,7 @@ var base_sov =
   'Unit': 'EA',
   'Contract QTY': 10,
   'Unit Price': 150,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
-  
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_105_SW_laterals_22'], 'SW-13', 150)
   },
 
 
