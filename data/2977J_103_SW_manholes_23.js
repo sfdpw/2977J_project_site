@@ -33,6 +33,9 @@ var json_2977J_103_SW_manholes_23 = {
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_007", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-414518", "NODE_ID": "317,026" }, "geometry": { "type": "Point", "coordinates": [ -122.399271407256023, 37.72314632115409 ] } },
 
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_008", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction", "PP_HISTORY": { }, "SUBMITTALS": { }, "MAXIMOID": "N-419785", "NODE_ID": "323,944" }, "geometry": { "type": "Point", "coordinates": [ -122.3993898338923, 37.723275842253557 ] } },
+
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_009", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction", "PP_HISTORY": { }, "SUBMITTALS": { }, "MAXIMOID": "N-419781", "NODE_ID": "323,926" }, "geometry": { "type": "Point", "coordinates": [ -122.400224225470609, 37.723478435410058 ] } },
 
 // Sheet SW-3
 
