@@ -50,6 +50,7 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	           <li>\
 		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP01.html">PP01 - Jan 2022</a>\
 		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP02.html">PP02 - Feb 2022</a>\
+		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP03.html">PP03 - Feb 2022</a>\
 	           </li>\
 	         </ul>\
 	       </li>\
@@ -59,6 +60,7 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	           <li>\
 	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP01.html">PP01 - Jan 2022</a>\
 	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP02.html">PP02 - Feb 2022</a>\
+	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP03.html">PP03 - Mar 2022</a>\
 	           </li>\
 	         </ul>\
 	       </li>\
@@ -71,8 +73,25 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	         <a class="dropdown-item" href="#">Flatwork &raquo;</a>\
 	         <ul class="submenu dropdown-menu">\
 	           <li>\
+	             <a class="dropdown-item" href="#">Street Rennovation &raquo;</a>\
+	             <ul class="submenu dropdown-menu">\
+	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-03.html">R-03: Planing</a>\
+	               </li>\
+	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-04.html">R-04: HMA</a>\
+	               </li>\
+	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-06.html">R-06: 10in Conc. Base</a>\
+	               </li>\
+	             </ul>\
+	           </li>\
+	           <li>\
 	             <a class="dropdown-item" href="#">Sidewalk, Curb and Gutter &raquo;</a>\
 	             <ul class="submenu dropdown-menu">\
+	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-07.html">R-07: Conc. Pavement, Parking Strip and Gutter</a>\
+	               </li>\
 	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-08.html">R-08: 3.5in Sidewalk</a>\
 	               </li>\
@@ -108,6 +127,9 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-11.html">SW-11 - Pre-Con TVI of (E) Side Sewers and Culverts</a>\
 	               </li>\
 	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-13.html">SW-13 - Side Sewer Connection to Sewer Main</a>\
+	               </li>\
+	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-17.html">SW-17 - Post-Con TVI of (N) Side Sewers and Culverts</a>\
 	               </li>\
 	             </ul>\
@@ -117,6 +139,9 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	             <ul class="submenu dropdown-menu">\
 	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-05.html">SW-05 - (N) 12" VCP SW Main</a>\
+	               </li>\
+	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-07.html">SW-07 - (N) 21" VCP SW Main</a>\
 	               </li>\
 	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-08.html">SW-08 - (N) 24" VCP SW Main</a>\

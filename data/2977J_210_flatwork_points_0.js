@@ -9,7 +9,9 @@ var json_2977J_210_flatwork_points_0 = {
 
 { "type": "Feature", "properties": {"INST_ID": "R_15_R_01_002",'LOCATION': 'Woolsey St and Colby St Intersection - SEC', 'ASSET_TYPE': 'Water Meter', "STATUS": "Post-Construction", "PP_HISTORY": {'R-15': {'PP02': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": 'none', "RLVNT": 'none', "UTILITY": "Water Meter" }, "geometry": { "type": "Point", "coordinates": [ -122.411392, 37.722900 ] } },
 
-{ "type": "Feature", "properties": {"INST_ID": "R_15_R_02_001",'LOCATION': 'Woolsey St and Holyoke St Intersection - SWC', 'ASSET_TYPE': 'Water Meter', "STATUS": "Post-Construction", "PP_HISTORY": {'R-15': {'PP02': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": 'none', "RLVNT": 'none', "UTILITY": "Water Meter" }, "geometry": { "type": "Point", "coordinates": [ -122.407673, 37.723855 ] } }
+{ "type": "Feature", "properties": {"INST_ID": "R_15_R_02_001",'LOCATION': 'Woolsey St and Holyoke St Intersection - SWC', 'ASSET_TYPE': 'Water Meter', "STATUS": "Post-Construction", "PP_HISTORY": {'R-15': {'PP02': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": 'none', "RLVNT": 'none', "UTILITY": "Water Meter" }, "geometry": { "type": "Point", "coordinates": [ -122.407673, 37.723855 ] } },
+
+{ "type": "Feature", "properties": {"INST_ID": "R_15_R_03_001",'LOCATION': 'Woolsey St and Brussels St Intersection - NWC', 'ASSET_TYPE': 'Water Meter', "STATUS": "Post-Construction", "PP_HISTORY": {'R-15': {'PP03': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": 'none', "RLVNT": 'none', "UTILITY": "Water Meter" }, "geometry": { "type": "Point", "coordinates": [ -122.404731, 37.724809 ] } }
 
 
 

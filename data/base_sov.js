@@ -48,7 +48,7 @@ var base_sov =
                    'SFPW-ESH': {
                                 'PP01':2760,
                                 'PP02':6900,
-                                'PP03':0.00,    
+                                'PP03':45540,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
@@ -112,74 +112,24 @@ var base_sov =
   
 {
   'Bid Item': 'R-3',
-  'Worksheet': 0,
+  'Worksheet': 1,
   'Description': 'FULL DEPTH PLANING PER 2-INCH DEPTH OF CUT',
   'Unit': 'SF',
   'Contract QTY': 228179,
   'Unit Price': 0.40,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_200_flatwork_19'], 'R-03', 0.4)                     
   
   },
  
    
 {
   'Bid Item': 'R-4',
-  'Worksheet': 0,
+  'Worksheet': 1,
   'Description': 'HOT MIX ASPHALT (Type A ½-Inch Maximum with Medium Grading)',
   'Unit': 'TON',
   'Contract QTY': 3241,
   'Unit Price': 164,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_200_flatwork_19'], 'R-04', 164)               
   
   },
 
@@ -223,74 +173,24 @@ var base_sov =
 
 {
   'Bid Item': 'R-6',
-  'Worksheet': 0,
+  'Worksheet': 1,
   'Description': '10-INCH THICK CONCRETE BASE',
   'Unit': 'SF',
   'Contract QTY': 75965,
   'Unit Price': 14,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_200_flatwork_19'], 'R-06', 14)                         
   
   },
 
 
 {
   'Bid Item': 'R-7',
-  'Worksheet': 0,
+  'Worksheet': 1,
   'Description': '8-INCH THICK CONCRETE PAVEMENT, PARKING STRIP, OR GUTTER',
   'Unit': 'SF',
   'Contract QTY': 541,
   'Unit Price': 16,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_200_flatwork_19'], 'R-07', 16)                         
   
   },
 
@@ -362,7 +262,7 @@ var base_sov =
                    'SFPW-ESH': {
                                 'PP01':0.00,
                                 'PP02':0.00,
-                                'PP03':0.00,    
+                                'PP03':5000,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
@@ -559,9 +459,9 @@ var base_sov =
                    'SFPW-ESH': {
                                 'PP01':12500,
                                 'PP02':0.00,
-                                'PP03':0.00,    
+                                'PP03':37500,    
                                 'PP04':0.00,   
-                                'PP05':0.00,    
+                                'PP05':0.00,   
                                 'PP06':0.00,                               
                                 'PP07':0.00, 
                                 'PP08':0.00,                               
@@ -633,7 +533,7 @@ var base_sov =
                    'SFPW-ESH': {
                                 'PP01':1248,
                                 'PP02':1644.5,
-                                'PP03':0.00,    
+                                'PP03':1722.5,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
@@ -645,7 +545,7 @@ var base_sov =
                    'SFPUC-SW': {            
                                 'PP01':11232,
                                 'PP02':14800.5,
-                                'PP03':0.00,    
+                                'PP03':15502.5,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
@@ -670,7 +570,7 @@ var base_sov =
                    'SFPW-ESH': {
                                 'PP01':2688,
                                 'PP02':3542,
-                                'PP03':0.00,    
+                                'PP03':3710,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
@@ -682,7 +582,7 @@ var base_sov =
                    'SFPUC-SW': {            
                                 'PP01':24192,
                                 'PP02':31878,
-                                'PP03':0.00,    
+                                'PP03':33390,    
                                 'PP04':0.00,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
@@ -773,32 +673,7 @@ var base_sov =
   'Unit': 'LF',
   'Contract QTY': 248,
   'Unit Price': 470,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_101_SW_mains_20'], 'SW-07', 470)                         
   
   },
 

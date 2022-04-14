@@ -92,7 +92,13 @@ function unpack_flatwork_feature_description(property_filters)
     var output_L_desc = '';
 
 
-        if (property_filters == 'R-4')
+        if  (property_filters == 'R-3')
+        
+        {
+        
+           output_L_desc = 'Full Depth Planing Per 2-Inch Depth of Cut';
+         
+         } else if (property_filters == 'R-4')
 
         {
 

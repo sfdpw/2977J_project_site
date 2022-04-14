@@ -10,7 +10,7 @@ var json_2977J_103_SW_manholes_23 = {
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_002", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Post-Construction",'LOCATION':'Paul Ave - Midblock between San Bruno Ave and Bayshore Blvd', "PP_HISTORY": {'SW-03': {'PP02': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-406060", "NODE_ID": "309,527" }, "geometry": { "type": "Point", "coordinates": [ -122.401592551422823, 37.723804724259125 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_003", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-406061", "NODE_ID": "309,526" }, "geometry": { "type": "Point", "coordinates": [ -122.400930968482569, 37.723647434904741 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_003", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": "Post-Construction",'LOCATION':'Intersection of Paul Ave and Bayshore Blvd - West', "PP_HISTORY": {'SW-03': {'PP03': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-406061", "NODE_ID": "309,526" }, "geometry": { "type": "Point", "coordinates": [ -122.400930968482569, 37.723647434904741 ] } },
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_01_004", "SCOPE": "Remove (E)", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-23234", "NODE_ID": "35,351" }, "geometry": { "type": "Point", "coordinates": [ -122.400957197413931, 37.723654056072306 ] } },
 
@@ -27,7 +27,7 @@ var json_2977J_103_SW_manholes_23 = {
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_004", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-33895", "NODE_ID": "35,422" }, "geometry": { "type": "Point", "coordinates": [ -122.400133652781733, 37.723355190991306 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_005", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-406062", "NODE_ID": "309,525" }, "geometry": { "type": "Point", "coordinates": [ -122.400097060532815, 37.723448027130402 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_005", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Post-Construction",'LOCATION':'Intersection of Paul Ave and Wheat St', "PP_HISTORY": {'SW-03': {'PP03': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-406062", "NODE_ID": "309,525" }, "geometry": { "type": "Point", "coordinates": [ -122.400097060532815, 37.723448027130402 ] } },
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_006", "SCOPE": "Remove (E)", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-401636", "NODE_ID": "305,743" }, "geometry": { "type": "Point", "coordinates": [ -122.399675723443224, 37.723345177974416 ] } },
 
@@ -35,7 +35,7 @@ var json_2977J_103_SW_manholes_23 = {
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_008", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction", "PP_HISTORY": { }, "SUBMITTALS": { }, "MAXIMOID": "N-419785", "NODE_ID": "323,944" }, "geometry": { "type": "Point", "coordinates": [ -122.3993898338923, 37.723275842253557 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_009", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction", "PP_HISTORY": { }, "SUBMITTALS": { }, "MAXIMOID": "N-419781", "NODE_ID": "323,926" }, "geometry": { "type": "Point", "coordinates": [ -122.400224225470609, 37.723478435410058 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_009", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Post-Construction", 'LOCATION':'West of Intersection of Paul Ave and Wheat St', "PP_HISTORY": {'SW-03': {'PP03': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": { }, "MAXIMOID": "N-419781", "NODE_ID": "323,926" }, "geometry": { "type": "Point", "coordinates": [ -122.400224225470609, 37.723478435410058 ] } },
 
 // Sheet SW-3
 
