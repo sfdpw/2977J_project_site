@@ -107,7 +107,8 @@ function pop_up_creator_for_domain(feature, layer)
             '<br><br>\
 <strong>Post-Con Submittal - Video - Response</strong><br>' +
             feature.properties.SUBMITTALS.TVI_PST_CON.SUBMITTAL + ' - ' +
-            feature.properties.SUBMITTALS.TVI_PST_CON.VIDEO +
+            feature.properties.SUBMITTALS.TVI_PST_CON.VIDEO + ' - ' +
+            feature.properties.SUBMITTALS.TVI_PST_CON.RESPONSE +        
             '<br><br>\
 <strong>Status</strong><br>' +
             (feature.properties['STATUS'] !== null ? Autolinker.link(feature.properties['STATUS'].toLocaleString()) : '') +
