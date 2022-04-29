@@ -38,11 +38,11 @@ var json_2977J_104_SW_drains_24 = {
 
 { "type": "Feature", "properties": { "INST_ID": "CBSD_SW_03_004", "SCOPE": "(E) to Remain", "STATUS": "No Construction", 'LOCATION': '',"PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-57100", "NODE_ID": "173,200" }, "geometry": { "type": "Point", "coordinates": [ -122.4065165751461, 37.724285139033292 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "CBSD_SW_03_005", "SCOPE": "Install (N) per SFPW STD Plan 87,188", "STATUS": "Pre-Construction", 'LOCATION': '',"PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-418005", "NODE_ID": "321,364" }, "geometry": { "type": "Point", "coordinates": [ -122.39713539366312, 37.72092073077112 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "CBSD_SW_03_005", "SCOPE": "Install (N) per SFPW STD Plan 87,188", "STATUS": "Post-Construction", 'LOCATION': 'Salinas Ave and Keith St - North',"PP_HISTORY": {'SW-10': {'PP04': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-418005", "NODE_ID": "321,364" }, "geometry": { "type": "Point", "coordinates": [ -122.39713539366312, 37.72092073077112 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "CBSD_SW_03_006", "SCOPE": "Install (N) per SFPW STD Plan 87,188", "STATUS": "Pre-Construction", 'LOCATION': '',"PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-418004", "NODE_ID": "321,365" }, "geometry": { "type": "Point", "coordinates": [ -122.397193874351089, 37.720886477544816 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "CBSD_SW_03_006", "SCOPE": "Install (N) per SFPW STD Plan 87,188", "STATUS": "Post-Construction", 'LOCATION': 'Salinas Ave and Keith St - SWC',"PP_HISTORY": {'SW-10': {'PP04': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-418004", "NODE_ID": "321,365" }, "geometry": { "type": "Point", "coordinates": [ -122.397193874351089, 37.720886477544816 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "CBSD_SW_03_007", "SCOPE": "Install (N) per SFPW STD Plan 87,188", "STATUS": "Pre-Construction", 'LOCATION': '',"PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-418003", "NODE_ID": "321,366" }, "geometry": { "type": "Point", "coordinates": [ -122.397423262951037, 37.720990065642169 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "CBSD_SW_03_007", "SCOPE": "Install (N) per SFPW STD Plan 87,188", "STATUS": "Post-Construction", 'LOCATION': 'Salinas Ave and Carr St - NWC',"PP_HISTORY": {'SW-10': {'PP04': {'SFPW-ESH':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-418003", "NODE_ID": "321,366" }, "geometry": { "type": "Point", "coordinates": [ -122.397423262951037, 37.720990065642169 ] } },
 
 
 // Sheet SW-4

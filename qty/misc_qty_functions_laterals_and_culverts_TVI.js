@@ -150,7 +150,7 @@ function qty_table_generator_laterals_lat_culv_TVI(qty_bid_item) {
                         '<tr class="qty_tr">\
                         <td class="qty_td" style="text-align:left; padding:5px">' +
                         lateral_extracted_details[0] + '</td>\
-                        <td class="qty_td" style="text-align:left; padding:5px">' +
+                        <td class="qty_td" style="text-align:center; padding:5px">' +
                         lateral_extracted_details[1] + '</td>\
                         <td class="qty_td" style="text-align:center; padding:5px">' +
                         lateral_extracted_details[2][0] + '</td>\

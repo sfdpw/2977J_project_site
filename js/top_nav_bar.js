@@ -50,7 +50,8 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	           <li>\
 		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP01.html">PP01 - Jan 2022</a>\
 		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP02.html">PP02 - Feb 2022</a>\
-		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP03.html">PP03 - Feb 2022</a>\
+		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP03.html">PP03 - Mar 2022</a>\
+		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP04.html">PP04 - Apr 2022</a>\
 	           </li>\
 	         </ul>\
 	       </li>\
@@ -61,6 +62,7 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP01.html">PP01 - Jan 2022</a>\
 	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP02.html">PP02 - Feb 2022</a>\
 	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP03.html">PP03 - Mar 2022</a>\
+	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP04.html">PP04 - Apr 2022</a>\
 	           </li>\
 	         </ul>\
 	       </li>\
@@ -130,6 +132,9 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-13.html">SW-13 - Side Sewer Connection to Sewer Main</a>\
 	               </li>\
 	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-14.html">SW-14 - Side Sewer Replacement</a>\
+	               </li>\
+	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-17.html">SW-17 - Post-Con TVI of (N) Side Sewers and Culverts</a>\
 	               </li>\
 	             </ul>\
@@ -139,6 +144,9 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	             <ul class="submenu dropdown-menu">\
 	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-05.html">SW-05 - (N) 12" VCP SW Main</a>\
+	               </li>\
+	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-06.html">SW-06 - (N) 18" VCP SW Main</a>\
 	               </li>\
 	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-07.html">SW-07 - (N) 21" VCP SW Main</a>\

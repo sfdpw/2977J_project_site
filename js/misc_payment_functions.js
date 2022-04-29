@@ -113,8 +113,13 @@ function qty_or_blank(input_num, unit) {
 
         {
 
+          if (Math.abs(input_num) % 1 == 0)
 
-            return_block = input_num;
+          { return_block = input_num; }
+          
+          else
+          
+          { return_block = input_num.toFixed(2); }
 
 
         } else if (unit == 'LS' || unit == 'AL')

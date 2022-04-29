@@ -534,7 +534,7 @@ var base_sov =
                                 'PP01':1248,
                                 'PP02':1644.5,
                                 'PP03':1722.5,    
-                                'PP04':0.00,   
+                                'PP04':1885,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
                                 'PP07':0.00, 
@@ -546,7 +546,7 @@ var base_sov =
                                 'PP01':11232,
                                 'PP02':14800.5,
                                 'PP03':15502.5,    
-                                'PP04':0.00,   
+                                'PP04':16965,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
                                 'PP07':0.00, 
@@ -571,7 +571,7 @@ var base_sov =
                                 'PP01':2688,
                                 'PP02':3542,
                                 'PP03':3710,    
-                                'PP04':0.00,   
+                                'PP04':4060,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
                                 'PP07':0.00, 
@@ -583,7 +583,7 @@ var base_sov =
                                 'PP01':24192,
                                 'PP02':31878,
                                 'PP03':33390,    
-                                'PP04':0.00,   
+                                'PP04':36540,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
                                 'PP07':0.00, 
@@ -632,37 +632,12 @@ var base_sov =
 
 {
   'Bid Item': 'SW-6',
-  'Worksheet': 0,
+  'Worksheet': 1,
   'Description': '18-INCH DIAMETER VCP SEWER ON CRUSHED ROCK BEDDING',
   'Unit': 'LF',
   'Contract QTY': 255,
   'Unit Price': 365,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_101_SW_mains_20'], 'SW-06', 365)                
   
   },
 
@@ -718,7 +693,7 @@ var base_sov =
   'Unit': 'EA',
   'Contract QTY': 10,
   'Unit Price': 10,
-  'Payment History': return_pp_history_from_spatial_file(['json_2977J_102_SW_culverts_21'], 'SW-11', 10)
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_105_SW_laterals_22', 'json_2977J_102_SW_culverts_21'], 'SW-11', 10)
   },
 
 
@@ -772,37 +747,12 @@ var base_sov =
 
 {
   'Bid Item': 'SW-14',
-  'Worksheet': 0,
+  'Worksheet': 2,
   'Description': 'REPLACEMENT OF 6-INCH OR 8-INCH DIAMETER SIDE SEWER LOCATED WITHIN LIMITS OF MAIN SEWER WORK (CONTINGENCY BID ITEM)** ',
   'Unit': 'LF',
   'Contract QTY': 230,
   'Unit Price': 160,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_105_SW_laterals_22'], 'SW-14', 160)         
   
   },
 
@@ -856,7 +806,7 @@ var base_sov =
                                 'PP01':0.00,
                                 'PP02':0.00,
                                 'PP03':0.00,    
-                                'PP04':0.00,   
+                                'PP04':1000,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
                                 'PP07':0.00, 
@@ -868,7 +818,7 @@ var base_sov =
                                 'PP01':0.00,
                                 'PP02':0.00,
                                 'PP03':0.00,    
-                                'PP04':0.00,   
+                                'PP04':9000,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
                                 'PP07':0.00, 
@@ -1237,7 +1187,7 @@ var base_sov =
                                 'PP01':0.00,
                                 'PP02':0.00,
                                 'PP03':0.00,    
-                                'PP04':0.00,   
+                                'PP04':1500,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
                                 'PP07':0.00, 
@@ -1249,7 +1199,7 @@ var base_sov =
                                 'PP01':0.00,
                                 'PP02':0.00,
                                 'PP03':0.00,    
-                                'PP04':0.00,   
+                                'PP04':13500,   
                                 'PP05':0.00,    
                                 'PP06':0.00,                               
                                 'PP07':0.00, 

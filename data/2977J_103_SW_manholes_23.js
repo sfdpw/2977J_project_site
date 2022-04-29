@@ -19,21 +19,21 @@ var json_2977J_103_SW_manholes_23 = {
 
 // Sheet SW-2
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_001", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-406063", "NODE_ID": "309,524" }, "geometry": { "type": "Point", "coordinates": [ -122.399235970295408, 37.72323813524622 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_001", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": 'Post-Construction','LOCATION':'', "PP_HISTORY": {'SW-03': {'PP04': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-406063", "NODE_ID": "309,524" }, "geometry": { "type": "Point", "coordinates": [ -122.399235970295408, 37.72323813524622 ] } },
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_002", "SCOPE": "Remove (E)", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-401635", "NODE_ID": "305,744" }, "geometry": { "type": "Point", "coordinates": [ -122.399376322981638, 37.723272565501439 ] } },
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_003", "SCOPE": "(E) to Remain", "STATUS": "No Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-23239", "NODE_ID": "35,368" }, "geometry": { "type": "Point", "coordinates": [ -122.399297078125102, 37.723080771119648 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_004", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-33895", "NODE_ID": "35,422" }, "geometry": { "type": "Point", "coordinates": [ -122.400133652781733, 37.723355190991306 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_004", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": 'Post-Construction','LOCATION':'', "PP_HISTORY": {'SW-03': {'PP04': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-33895", "NODE_ID": "35,422" }, "geometry": { "type": "Point", "coordinates": [ -122.400133652781733, 37.723355190991306 ] } },
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_005", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Post-Construction",'LOCATION':'Intersection of Paul Ave and Wheat St', "PP_HISTORY": {'SW-03': {'PP03': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-406062", "NODE_ID": "309,525" }, "geometry": { "type": "Point", "coordinates": [ -122.400097060532815, 37.723448027130402 ] } },
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_006", "SCOPE": "Remove (E)", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-401636", "NODE_ID": "305,743" }, "geometry": { "type": "Point", "coordinates": [ -122.399675723443224, 37.723345177974416 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_007", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction",'LOCATION':'', "PP_HISTORY": {}, "SUBMITTALS": {}, "MAXIMOID": "N-414518", "NODE_ID": "317,026" }, "geometry": { "type": "Point", "coordinates": [ -122.399271407256023, 37.72314632115409 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_007", "SCOPE": "Install (N) per SFPW STD Plan 87,181", "STATUS": 'Post-Construction','LOCATION':'', "PP_HISTORY": {'SW-03': {'PP04': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": {}, "MAXIMOID": "N-414518", "NODE_ID": "317,026" }, "geometry": { "type": "Point", "coordinates": [ -122.399271407256023, 37.72314632115409 ] } },
 
-{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_008", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Pre-Construction", "PP_HISTORY": { }, "SUBMITTALS": { }, "MAXIMOID": "N-419785", "NODE_ID": "323,944" }, "geometry": { "type": "Point", "coordinates": [ -122.3993898338923, 37.723275842253557 ] } },
+{ "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_008", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": 'Post-Construction', "PP_HISTORY": {'SW-03': {'PP04': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": { }, "MAXIMOID": "N-419785", "NODE_ID": "323,944" }, "geometry": { "type": "Point", "coordinates": [ -122.3993898338923, 37.723275842253557 ] } },
 
 { "type": "Feature", "properties": { "INST_ID": "SWMH_SW_02_009", "SCOPE": "Replace (E) with (N) per SFPW STD Plan 87,181", "STATUS": "Post-Construction", 'LOCATION':'West of Intersection of Paul Ave and Wheat St', "PP_HISTORY": {'SW-03': {'PP03': {'SFPUC-SW':{'QTY': 1, 'UNIT': 'EA'}}}}, "SUBMITTALS": { }, "MAXIMOID": "N-419781", "NODE_ID": "323,926" }, "geometry": { "type": "Point", "coordinates": [ -122.400224225470609, 37.723478435410058 ] } },
 
