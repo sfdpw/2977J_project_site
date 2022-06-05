@@ -86,6 +86,9 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-04.html">R-04: HMA</a>\
 	               </li>\
 	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-05.html">R-05: 8in Conc. Base</a>\
+	               </li>\
+	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_R-06.html">R-06: 10in Conc. Base</a>\
 	               </li>\
 	             </ul>\
