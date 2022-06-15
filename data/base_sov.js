@@ -50,7 +50,7 @@ var base_sov =
                                 'PP02':6900,
                                 'PP03':45540,    
                                 'PP04':0.00,   
-                                'PP05':0.00,    
+                                'PP05':55200,    
                                 'PP06':0.00,                               
                                 'PP07':0.00, 
                                 'PP08':0.00,                               
@@ -75,37 +75,12 @@ var base_sov =
 
  {
   'Bid Item': 'R-2',
-  'Worksheet': 0,
+  'Worksheet': 1,
   'Description': 'TEMPORARY RETROFLECTIVE PAVEMENT MARKINGS',
   'Unit': 'LF',
   'Contract QTY': 5000,
   'Unit Price': 0.20,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_200_flatwork_19'], 'R-02', 0.2)          
   
   },
 
