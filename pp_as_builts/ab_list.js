@@ -28,7 +28,8 @@ var json_ab_list = {
 '2977J_R-03_AB_PP05_a',
 '2977J_R-03_AB_PP05_b',
 '2977J_R-04_AB_PP05_a',
-'2977J_R-04_AB_PP05_b'
+'2977J_R-04_AB_PP05_b',
+'2977J_R-04_AB_PP06',
 
 ], 
  

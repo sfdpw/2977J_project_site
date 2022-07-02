@@ -1,4 +1,3 @@
-
 function SW_main_layer_toggle(layer_index, master_layer_array, local_json_layer_obj, property_filters, rgba_code)
 
   {
@@ -123,3 +122,4 @@ function unpack_SW_main_feature_description(property_filters)
     return output_L_desc
 
 }
+
