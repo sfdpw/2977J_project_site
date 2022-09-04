@@ -152,6 +152,12 @@ function unpack_flatwork_feature_description(property_filters)
 
             output_L_desc = 'Concrete Curb Ramp with Concrete Detectable Surface Tiles';
 
+        } else if (property_filters == 'R-14')
+
+        {
+
+            output_L_desc = 'Pullbox Type I';
+
         } else if (property_filters == 'R-15')
 
         {

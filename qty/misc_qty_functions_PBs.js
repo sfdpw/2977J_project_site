@@ -87,7 +87,7 @@ function qty_table_generator_E_pullboxes(qty_bid_item) {
                     "\" target=\"_blank\">" +
                     pullbox_instance_properties['LOCATION'];
                     
-                    pullbox_instance_extracted_details[2] = pullbox_instance_properties['ASSET_TYPE'];
+                    pullbox_instance_extracted_details[2] = pullbox_instance_properties['UTILITY'];
 
 
 

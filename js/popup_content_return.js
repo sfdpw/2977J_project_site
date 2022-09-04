@@ -256,7 +256,7 @@ function pop_up_creator_for_domain(feature, layer)
             unpack_flatwork_feature_description(bid_item_code) +
             '<br><br>'; 
             
-          if (bid_item_code == 'R-15')
+          if (bid_item_code == 'R-14' || bid_item_code == 'R-15')
           
             {
             

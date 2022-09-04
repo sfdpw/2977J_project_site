@@ -240,37 +240,12 @@ var base_sov =
 
 {
   'Bid Item': 'R-14',
-  'Worksheet': 0,
+  'Worksheet': 2,
   'Description': 'PULL BOX TYPE I (CONTINGENCY BID ITEM)**',
   'Unit': 'EA',
   'Contract QTY': 10,
   'Unit Price': 100,
-  'Payment History': {
-                   'SFPW-ESH': {
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                },
-                   'SFPUC-SW': {            
-                                'PP01':0.00,
-                                'PP02':0.00,
-                                'PP03':0.00,    
-                                'PP04':0.00,   
-                                'PP05':0.00,    
-                                'PP06':0.00,                               
-                                'PP07':0.00, 
-                                'PP08':0.00,                               
-                                'PP09':0.00,      
-                                'PP10':0.00
-                                }
-                   }           
+  'Payment History': return_pp_history_from_spatial_file(['json_2977J_210_flatwork_points_0'], 'R-14', 100)          
   
   },
 
