@@ -194,6 +194,20 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	       </li>\
 	     </ul>\
 	   </li>\
+	   <li class="nav-item dropdown">\
+	     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">SW Tracking</a>\
+	     <ul class="dropdown-menu">\
+	       <li>\
+	         <a class="dropdown-item" href="' + nav_path + 'tracking/sw_tracking_mains.html">Mains</a>\
+	       </li>\
+	       <li>\
+	         <a class="dropdown-item" href="' + nav_path + 'tracking/sw_tracking_culverts.html">Culverts</a>\
+	       </li>\
+	       <li>\
+	         <a class="dropdown-item" href="' + nav_path + 'tracking/sw_tracking_laterals.html">Laterals</a>\
+	       </li>\
+	     </ul>\
+	   </li>\
 	   <li class="nav-item active">\
 	     <a class="nav-link" href="' + nav_path + 'specs/specs.html">Specs</a>\
            </li>\
@@ -225,6 +239,18 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
                     data-toogle="tooltip"\
 	            title="' + base_sov[NN]['Description'] +
             ' (' + base_sov[NN]['Unit'] + ')"\> Quantity Details for ' + bid_item_id + '</div>';
+
+    } else if (nav_element.includes('Asset_Tracking'))
+
+    {
+
+        return_block +=
+
+            '<div style="float:right;\
+                    padding-right:10px;\
+                    color:white;\
+                    font-weight:bold"\
+                    >' + nav_element.replace(/_/g, " ") + '</div>';
 
     }
 

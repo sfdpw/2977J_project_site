@@ -1,0 +1,105 @@
+
+
+.track_table {
+
+  /* table-layout: fixed; */
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 9px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.track_table.no_menu {
+
+ left: 0;
+ right: 0;
+ display:block;
+ height:100vh;
+ overflow-y:auto;
+
+
+}
+
+
+
+.track_td, .track_tdh {
+
+  border: 1px solid black;
+  border-collapse: collapse; 
+  text-align: center;
+  padding:5px 
+  
+}
+
+
+.track_td.pending {
+
+ background-color:#f9ffb8;
+
+}
+
+
+.track_td.rejected {
+
+ background-color:#ffe7d3;
+
+}
+
+.track_td.approved {
+
+ background-color:#e2ffc8;
+
+}
+
+.track_td.no_action {
+
+ background-color:#efefef;
+
+}
+
+.track_td.misc {
+
+ background-color:#bd00ff;
+
+}
+
+
+.track_thead{
+
+  border: 1px solid black;
+  border-collapse: collapse; 
+  color:white;
+  background:grey;
+  text-align:center;
+  padding:5px;
+
+
+}
+
+  .track_thead, .track_th {
+
+  position: sticky;
+  top: 0;
+
+}
+
+  .track_tdh {
+  
+
+  position: sticky;
+  top: 1.8em;
+
+
+}
+
+
+
+
+
+
+
+
+
