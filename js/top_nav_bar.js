@@ -55,6 +55,7 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP05.html">PP05 - May 2022</a>\
 		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP06.html">PP06 - Jun 2022</a>\
 		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP07.html">PP07 - Jul-Aug 2022</a>\
+		     <a class="dropdown-item" href="' + nav_path + 'sov/sov_PP08.html">PP08 - Oct 2022</a>\
 	           </li>\
 	         </ul>\
 	       </li>\
@@ -69,6 +70,7 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP05.html">PP05 - May 2022</a>\
 	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP06.html">PP06 - Jun 2022</a>\
 	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP07.html">PP07 - Jul-Aug 2022</a>\
+	             <a class="dropdown-item" href="' + nav_path + 'funding/funding_PP08.html">PP08 - Oct 2022</a>\
 	           </li>\
 	         </ul>\
 	       </li>\
@@ -176,6 +178,9 @@ function top_nav(nav_element, pp_no = null, bid_item_id = null)
 	             <ul class="submenu dropdown-menu">\
 	               <li>\
 	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-10.html">SW-10 - (N) CB - STD 87,188</a>\
+	               </li>\
+	               <li>\
+	                 <a class="dropdown-item" href="' + nav_path + 'qty/qty_SW-18.html">SW-18 - (N) CI Trap in (E) CB</a>\
 	               </li>\
 	             </ul>\
 	           </li>\
